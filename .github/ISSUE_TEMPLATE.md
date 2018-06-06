@@ -1,0 +1,1 @@
+⚠ Please use the links on the bottom of the [documentation pages](https://azurebi-docs.jppp.org) to get a link between an issue and the page. ⚠
