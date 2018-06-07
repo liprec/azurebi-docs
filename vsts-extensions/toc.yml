@@ -1,0 +1,22 @@
+- name: Visual Studio Team Service extensions
+  href: index.md
+- name: Azure Analysis Service
+  href: azure-analysis-service.md
+  items:
+    - name: Deploy task
+      href: azure-analysis-service-deploy.md
+    - name: TMSL Script task
+      href: azure-analysis-service-execute.md
+    - name: Changelog
+      href: azure-analysis-service-changelog.md
+- name: Azure Data Factory
+  href: azure-data-factory.md
+  items:
+    - name: Deploy task
+      href: azure-data-factory-deploy.md
+    - name: Trigger task
+      href: azure-data-factory-trigger.md
+    - name: Pipeline task
+      href: azure-data-factory-pipeline.md
+    - name: Changelog
+      href: azure-data-factory-changelog.md

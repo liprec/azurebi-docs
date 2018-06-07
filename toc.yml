@@ -1,0 +1,10 @@
+- name: Power BI Visuals
+  href: powerbi-visuals/
+  homepage: powerbi-visuals/index.md
+- name: VSTS Extensions
+  href: vsts-extensions/
+  homepage: vsts-extensions/index.md
+- name: Community Events
+  href: https://azurebi.jppp.org/community-events/
+- name: About Me
+  href: https://azurebi.jppp.org/author/janpieter/

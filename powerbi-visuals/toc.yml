@@ -1,0 +1,17 @@
+- name: Power BI Custom Visuals
+  href: index.md
+- name: Box and Whisker chart
+  href: box-and-whisker-chart.md
+  items:
+    - name: Changelog
+      href: box-and-whisker-changelog.md
+- name: Hierarchy Slicer
+  href: hierarchy-slicer.md
+  items:
+    - name: Changelog
+      href: hierarchy-slicer-changelog.md
+- name: D3.js visual
+  href: d3js.md
+  items:
+    - name: Changelog
+      href: d3js-changelog.md

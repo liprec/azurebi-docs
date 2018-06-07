@@ -9,7 +9,7 @@ tags: [
 ]
 system: {
     document_id: 4555c56c-3a13-42d3-a4d4-df34d7b4e455,
-    program_github: liprec/powerbi-d3jsvisual
+    program_github: liprec/powerbi-boxWhiskerChart 
 }
 ---
 # Power BI Box and Whisker chart
@@ -20,7 +20,7 @@ system: {
 
 ## Example
 
-<iframe width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiOWJlY2VmNTAtM2EzZC00NzY3LTkyMmUtYzg1NjFmOTRkMWM0IiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9" frameborder="0" onload="let f=document.getElementById('_content');this.height=f.offsetWidth/8*6;" allowFullScreen="true"></iframe>
+<iframe width="100%" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiOWJlY2VmNTAtM2EzZC00NzY3LTkyMmUtYzg1NjFmOTRkMWM0IiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9" frameborder="0" onload="let f=document.getElementById('_content');this.height=f.offsetWidth/8*6;" allowFullScreen="true"></iframe>
 
 See [here](https://app.powerbi.com/view?r=eyJrIjoiOWJlY2VmNTAtM2EzZC00NzY3LTkyMmUtYzg1NjFmOTRkMWM0IiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9) for an example if the embedded version is not working.
 
@@ -161,11 +161,13 @@ See for the list of changes [here](xref:pbi/boxandwhisker/changelog).
 
 ### [**Documentation**](#tab/docs)
 
-Documentation feedback
+If you have any comment related to the documentation, like corrections, unclear features or missing documentation, feel free to leave feedback below via GitHub. Or correct it yourself and submit a PR; see [CONTRIBUTING.md](https://github.com/liprec/azurebi-docs/blob/master/.github/CONTRIBUTING.md) for more details.
+*GitHub account required.*
 
 ### [**Product**](#tab/product)
 
-Product feedback
+If you have any comment related to the working of the described product, feel free to leave feedback below via GitHub.
+*GitHub account required.*
 
 ***
 

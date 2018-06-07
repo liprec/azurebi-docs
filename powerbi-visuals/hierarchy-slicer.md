@@ -17,11 +17,11 @@ system: {
 
 ## Hierarchy slicer
 
-![Hierarchy Slicer](images/HierarchySlicer.png)The hierarchy slicer for Power BI provides the opportunity to simple select multiple members of different levels of a hierarchy as selection. The slicer can be used with an existing hierarchy or a manual created hierarchy. 
+![Hierarchy Slicer](images/HierarchySlicer.png)The hierarchy slicer for Power BI provides the opportunity to simple select multiple members of different levels of a hierarchy as selection. The slicer can be used with an existing hierarchy or a manual created hierarchy.
 
 ## Example
 
-<iframe width="100%" height="100%" src="https://app.powerbi.com/view?r=eyJrIjoiYjYxYTAzMTgtOWI4OS00ZTA2LTk1MDYtZGUwZGUyNzE1OTgxIiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9" frameborder="0" onload="let f=document.getElementById('_content');this.height=f.offsetWidth/8*6;" allowFullScreen="true"></iframe>
+<iframe width="100%" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiYjYxYTAzMTgtOWI4OS00ZTA2LTk1MDYtZGUwZGUyNzE1OTgxIiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9" frameborder="0" onload="let f=document.getElementById('_content');this.height=f.offsetWidth/8*6;" allowFullScreen="true"></iframe>
 
 See [here](https://app.powerbi.com/view?r=eyJrIjoiYjYxYTAzMTgtOWI4OS00ZTA2LTk1MDYtZGUwZGUyNzE1OTgxIiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9) for an example if the embedded version is not working.
 
@@ -60,6 +60,17 @@ Basic color formatting of the items
 - **Background** - Background color for the items
 - **Text size** - Text size used for the header
 
+## Limitations
+
+The current version (v1.5.5) has the following limitations
+
+- Bookmarks are not supported. Will be addressed in the next release
+- Maximum number of hierarcht items is 4,000. Will be addressed in the next release
+- Persistent Slicers are not supported.
+- Sync Slicers are not yet supported: the custom visuals API is preventing this.
+- Export to PowerPoint/Emails is not possible as the slicer is not certified and cannot be certified
+- Visualize the slicer as a dropdown will not happen as the API doesn't support this
+
 ## Changelog
 
 See for the list of changes [here](xref:pbi/hierarchyslicer/changelog).
@@ -68,11 +79,13 @@ See for the list of changes [here](xref:pbi/hierarchyslicer/changelog).
 
 ### [**Documentation**](#tab/docs)
 
-Documentation feedback
+If you have any comment related to the documentation, like corrections, unclear features or missing documentation, feel free to leave feedback below via GitHub. Or correct it yourself and submit a PR; see [CONTRIBUTING.md](https://github.com/liprec/azurebi-docs/blob/master/.github/CONTRIBUTING.md) for more details.
+*GitHub account required.*
 
 ### [**Product**](#tab/product)
 
-Product feedback
+If you have any comment related to the working of the described product, feel free to leave feedback below via GitHub.
+*GitHub account required.*
 
 ***
 

@@ -122,11 +122,13 @@ See for the list of changes [here](xref:pbi/d3js/changelog).
 
 ### [**Documentation**](#tab/docs)
 
-Documentation feedback
+If you have any comment related to the documentation, like corrections, unclear features or missing documentation, feel free to leave feedback below via GitHub. Or correct it yourself and submit a PR; see [CONTRIBUTING.md](https://github.com/liprec/azurebi-docs/blob/master/.github/CONTRIBUTING.md) for more details.
+*GitHub account required.*
 
 ### [**Product**](#tab/product)
 
-Product feedback
+If you have any comment related to the working of the described product, feel free to leave feedback below via GitHub.
+*GitHub account required.*
 
 ***
 

@@ -1,0 +1,105 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{#title}}{{title}}</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="{{_rel}}styles/docfx.vendor.css">
+  <link rel="stylesheet" href="{{_rel}}styles/docfx.css">
+  <link rel="stylesheet" href="{{_rel}}styles/main.css">
+  <link rel="stylesheet" href="{{_rel}}styles/custom.css">
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+  <meta name="description" content="{{description}}" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="canonical" href="https://{{_FQDNs}}/{{_path}}" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+  
+  <meta property="og:site_name" content="Azure BI" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{#title}}{{title}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:url" content="https://{{_FQDNs}}/{{_path}}" />
+{{#tags}}
+  <meta property="article:tag" content="{{name}}" />
+{{/tags}}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{#title}}{{title}}" />
+  <meta name="twitter:description" content="{{description}}" />
+  <meta name="twitter:url" content="https://{{_FQDNs}}/{{_path}}" />
+  <meta name="twitter:label1" content="Written by" />
+  <meta name="twitter:data1" content="Jan Pieter Posthuma" />
+  <meta name="twitter:label2" content="Filed under" />
+{{#tags}}
+  <meta name="twitter:data2" content="{{name}}" />
+{{/tags}}
+  <meta name="twitter:site" content="@jppp" />
+  <meta name="twitter:creator" content="@jppp" />
+  
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Azure BI",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://azurebi.jppp.org/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jan Pieter Posthuma",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://azurebi.jppp.org/content/images/2018/04/jppp-5-highres.jpg",
+            "width": 3300,
+            "height": 3300
+        },
+        "sameAs": [
+            "https://datascenarios.nl",
+            "https://twitter.com/jppp"
+        ]
+    },
+    "headline": "{{#title}}{{title}}",
+    "url": "https://{{_FQDNs}}/{{_path}}",
+    "keywords": "{{#tags}}{{name}},{{/tags}}",
+    "description": "{{description}}",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://{{_FQDNs}}/"
+    }
+}
+  </script>
+  {{#system}}
+  <script>
+    let document_id{{#document_id}} = '{{document_id}}'{{/document_id}};
+    let program_github{{#program_github}} = '{{program_github}}'{{/program_github}};
+  </script>
+  {{/system}}
+  <script>
+    let feedbackGitHubRepo = '{{_feedbackGitHubRepo}}';
+    (function(){
+      var t,i,e,n=window,o=document,a=arguments,s="script",r=["config","track","identify","visit","push","call","trackForm","trackClick"],c=function(){var t,i=this;for(i._e=[],t=0;r.length>t;t++)(function(t){i[t]=function(){return i._e.push([t].concat(Array.prototype.slice.call(arguments,0))),i}})(r[t])};for(n._w=n._w||{},t=0;a.length>t;t++)n._w[a[t]]=n[a[t]]=n[a[t]]||new c;i=o.createElement(s),i.async=1,i.src="//static.woopra.com/js/w.js",e=o.getElementsByTagName(s)[0],e.parentNode.insertBefore(i,e)
+    })("woopra");
+
+    woopra.config({
+        domain: 'azurebi-docs.jppp.org',
+        download_tracking: true,
+        outgoing_tracking: true
+    });
+    woopra.track();
+  </script>
+  
+  <meta property="docfx:navrel" content="{{_navRel}}">
+  <meta property="docfx:tocrel" content="{{_tocRel}}">
+  {{#_noindex}}<meta name="searchOption" content="noindex">{{/_noindex}}
+  {{#_enableSearch}}<meta property="docfx:rel" content="{{_rel}}">{{/_enableSearch}}
+  {{#_enableNewTab}}<meta property="docfx:newtab" content="true">{{/_enableNewTab}}
+</head>

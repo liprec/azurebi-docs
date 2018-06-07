@@ -14,86 +14,136 @@ system: {
 ---
 # Changelog Hierarchy Slicer
 
-## Hierarchy Slicer changelog
-
 Of the hierarchy slicer Power BI custom visualization the following versions are released with the following new features, changes and bug fixes.
 
 *NOTE: All Power BI gallery visuals are distributed via the Azure CDN network and this will cause a delay of max a couple of days in delivering a new version.*
 
-### 2.x.x - (in development)
+## 2.x.x - (in development)
 
 - Uses new Power BI API
 - Certified custom visual (export capabilities)
 
-### 1.1.5 - (12 October 2017)
+## 1.2.7 - (TBD)
 
-- [FIXED] Single select not working properly
-- [FIXED] Deselect last selected member causes an error
+### NEW
 
-### 1.1.3 - (11 October 2017)
+- Added bookmark support
+- Increased number of item to 30,000
+- Formatting options for search
+- Mobile Friendly options added
 
-- [FIXED] Header issues in Chrome
+### CHANGED
 
-### 1.1.2 - (5 October 2017)
+- Search selection is 'added to current selection'
+- Better support for black theming
 
-- [FIXED] Expand all / Collapse All / Clear button do not work
-- [FIXED] Measure value is added to hierarchy
-- [FIXED] Single Select / Empty level option is not working as expected
+### FIXED
 
-### 1.1.0 - (27 September 2017)
+- Expanders visible at leaf level with ragged hierarchies
 
-- [FIXED] Scrolling issue in Power BI Desktop
-- [FIXED] Selected color not persisted
-- [FIXED] Power BI icons overwritten
-- [NEW] 'Select All' level is added
-- [NEW] Option to set the 'Hover Color'
-- [NEW] Indicator for partial selected levels
-- [UPDATED] Better support for black theming
-- [UPDATED] Updated icon set with scaling support
+## 1.1.5 - (12 October 2017)
 
-### 1.0.6.0 - (4 August 2017)
+### FIXED
 
-- [Bug] Fixed 'Unexpected Error' bug in Power BI Desktop
+- Single select not working properly
+- Deselect last selected member causes an error
 
-### 1.0.3.0 - (25 July 2017)
+## 1.1.3 - (11 October 2017)
 
-- [Bug] Scrolling issues are now fixed
+### FIXED
+
+- Header issues in Chrome
+
+## 1.1.2 - (5 October 2017)
+
+### FIXED
+
+- Expand all / Collapse All / Clear button do not work
+- Measure value is added to hierarchy
+- Single Select / Empty level option is not working as expected
+
+## 1.1.0 - (27 September 2017)
+
+### NEW
+
+- 'Select All' level is added
+- Option to set the 'Hover Color'
+- Indicator for partial selected levels
+
+### CHANGED
+
+- Better support for black theming
+- Updated icon set with scaling support
+
+### FIXED
+
+- Scrolling issue in Power BI Desktop
+- Selected color not persisted
+- Power BI icons overwritten
+
+## 1.0.6.0 - (4 August 2017)
+
+### FIXED
+
+- Fixed 'Unexpected Error' bug in Power BI Desktop
+
+## 1.0.3.0 - (25 July 2017)
+
+### NEW
+
 - Show/hide header
 - Show/hide '(blank) levels ('Ragged' hierarchies)
 
-### 1.0.0.0
+### FIXED
+
+- Scrolling issues are now fixed
+
+## 1.0.0.0
 
 - First release to the Office Store (v0.7.10)
 
-### 0.7.10 - (4 May 2017)
+## 0.7.10 - (4 May 2017)
 
-- [Bug] Wrong selection with search enabled
-- [Bug] Scrolling issue with increased font size
-- [Bug] Sometimes incorrect sorting (removed)
-- [Bug] Value filter is not working
+### FIXED
 
-### 0.7.9 - (24 August 2016)
+- Wrong selection with search enabled
+- Scrolling issue with increased font size
+- Sometimes incorrect sorting (removed)
+- Value filter is not working
+
+## 0.7.9 - (24 August 2016)
+
+### NEW
 
 - Adding search support
 - Configurable selected item font color
-- [Bug] Expand/collapse fixed in IE11
-- [Bug] Filter selection saves with report
 
-### 0.7.4 - (19 July 2016)
+### FIXED
+
+- Expand/collapse fixed in IE11
+- Filter selection saves with report
+
+## 0.7.4 - (19 July 2016)
+
+### NEW
 
 - Expand and collapse hierarchy levels
 - Multi-select available on all hierarchies
 - Configurable font / size and background for items and header
 - Filter hierarchy with a value
-- [Bug] Filter selection saved with report
 
-### 0.6.0 – (31 May 2016)
+### FIXED
+
+- Filter selection saved with report
+
+## 0.6.0 – (31 May 2016)
 
 Initial release
 
 ## Feedback
 
-Documentation feedback
+If you have any comment related to the documentation, like corrections, unclear features or missing documentation, feel free to leave feedback below via GitHub. Or correct it yourself and submit a PR; see [CONTRIBUTING.md](https://github.com/liprec/azurebi-docs/blob/master/.github/CONTRIBUTING.md) for more details.
+*GitHub account required.*
 
 ### [**Open**](#tab/docs-open)
 

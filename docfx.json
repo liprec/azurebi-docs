@@ -1,0 +1,48 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "powerbi-visuals/*.md",
+          "powerbi-visuals/toc.yml",
+          "vsts-extensions/*.md",
+          "vsts-extensions/toc.yml",
+          "toc.yml",
+          "*.md"
+        ],
+        "exclude": [
+          "***/README.md",
+          "***/CONTRIBUTING.md",
+          "***/ISSUE_TEMPLATE.md",
+          "***/PULL_REQUEST_TEMPLATE.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "powerbi-visuals/images/**",
+          "vsts-extensions/images/**"
+        ]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_enableSearch": true,
+      "_disableBreadcrumb": true,
+      "_FQDNs": "azurebi-docs.jppp.org",
+      "_feedbackGitHubRepo": "liprec/azurebi-docs"
+    },
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "theme"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false
+  }
+}
