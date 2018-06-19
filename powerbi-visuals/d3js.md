@@ -37,7 +37,7 @@ SVG element:
 
 | Method / Property | Description |
 |-------------------|-------------|
-| `dsv([accessor,] callback` | function that retrieves the data via the provided callback: pbi.dsv(callback) e.g. `pbi.csv(function(data) { //Process data function });`. Optional `accessor` function may be added. |
+| `dsv([accessor,] callback` | function that retrieves the data via the provided callback: pbi.dsv(callback) e.g. `pbi.dsv(function(data) { //Process data function });`. Optional `accessor` function may be added. |
 | `height` | height of the sandbox frame |
 | `width`  | width of the sandbox frame |
 | `colors` | color array with 8 colors; changable via options |
