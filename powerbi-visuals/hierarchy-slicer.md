@@ -64,12 +64,11 @@ Basic color formatting of the items
 
 The current version (v1.5.5) has the following limitations
 
-- Bookmarks are not supported. Will be addressed in the next release
-- Maximum number of hierarcht items is 4,000. Will be addressed in the next release
 - Persistent Slicers are not supported.
 - Sync Slicers are not yet supported: the custom visuals API is preventing this.
 - Export to PowerPoint/Emails is not possible as the slicer is not certified and cannot be certified
 - Visualize the slicer as a dropdown will not happen as the API doesn't support this
+- Company/Organizational Store is not supported due to no support for legacy visuals
 
 ## Changelog
 

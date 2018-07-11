@@ -23,7 +23,7 @@ Of the hierarchy slicer Power BI custom visualization the following versions are
 - Uses new Power BI API
 - Certified custom visual (export capabilities)
 
-## 1.2.7 - (TBD)
+## 1.2.9 - (3 Juli 2018)
 
 ### NEW
 
