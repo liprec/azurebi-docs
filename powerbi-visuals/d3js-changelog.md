@@ -1,7 +1,7 @@
 ---
 uid: pbi/d3js/changelog
-title: Power BI D3.js Visual
-description: Visualize your data with this box and whisker chart for Power BI. A box and whisker chart shows basic statistical information of a dataset.
+title: Changelog Power BI D3.js Visual
+description: Changelog of the Power BI D3.js Visual.
 tags: [
     { "name": "D3.js" }, 
     { "name": "Power BI" },
