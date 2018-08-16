@@ -81,6 +81,7 @@
   <script>
     let document_id{{#document_id}} = '{{document_id}}'{{/document_id}};
     let program_github{{#program_github}} = '{{program_github}}'{{/program_github}};
+    let document_url = 'https://{{_FQDNs}}/{{_path}}';
   </script>
   {{/system}}
   <script>

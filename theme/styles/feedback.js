@@ -91,7 +91,7 @@ function addIssues(issues, identifier, type) {
             break;
         case feedbackType.document:
             newIssueUrl = `https://github.com/${feedbackGitHubRepo}/issues/new`;
-            newIssueUrl += `?body=${loc.githubIssueStart}${loc.githubIssueHeader}${loc.githubIssueLinkWarning}%0A%0A* document_id=${document_id}`;
+            newIssueUrl += `?body=${loc.githubIssueStart}${loc.githubIssueHeader}${loc.githubIssueLinkWarning}%0A%0A* document_id=${document_id}%0A* document_url=${document_url}`;
             break;
     }
     
