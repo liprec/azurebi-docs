@@ -95,7 +95,12 @@
         download_tracking: true,
         outgoing_tracking: true
     });
-    woopra.track();
+    woopra.track("pv", {
+      url: window.location.pathname,
+      title: document.title,
+      document_id: document_id,
+      document_url: document_url
+    });
   </script>
   
   <meta property="docfx:navrel" content="{{_navRel}}">
