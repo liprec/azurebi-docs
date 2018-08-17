@@ -18,7 +18,7 @@ system: {
 
 - [Privacy terms](xref:privacy-terms.md)
 - [Explanation of Power BI and Azure CDN](https://azurebi.jppp.org/2016/07/20/power-bi-visuals-delivered-via-azure-cdn/)
-- [Visual Studio Code extension for easy development](xref:vscode/pbivizcliextension/overview)
+- [Visual Studio Code extension for easy development](xref:vscode/pbiviz/overview)
 
 ## Box and Whisker chart
 

@@ -1,5 +1,5 @@
 ---
-uid: vsts-extensions/index
+uid: vsts/index
 title: Visual Studio Team Service extensions
 tags: [
     { "name": "VSTS" }, 

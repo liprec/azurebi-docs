@@ -24,7 +24,7 @@ Landing page for all the documentation of my community projects.
 
 ### Visual Studio Code extensions
 
-- [PBIViz CLI Control](xref:vscode/pbivizcliextension/overview)
+- [PBIViz CLI Control](xref:vscode/pbiviz/overview)
 
 ## Feedback
 

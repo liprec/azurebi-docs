@@ -1,0 +1,7 @@
+- name: Visual Studio Code extensions
+  href: index.md
+- name: PBIViz CLI Control
+  href: pbiviz-cli.md
+  items:
+    - name: Changelog
+      href: pbiviz-cli-changelog.md

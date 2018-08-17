@@ -6,6 +6,8 @@
         "powerbi-visuals/toc.yml",
         "vsts-extensions/*.md",
         "vsts-extensions/toc.yml",
+        "vscode-extensions/*.md",
+        "vscode-extensions/toc.yml",
         "toc.yml",
         "*.md"
       ],
@@ -19,7 +21,8 @@
     "resource": [{
       "files": [
         "powerbi-visuals/images/**",
-        "vsts-extensions/images/**"
+        "vsts-extensions/images/**",
+        "vscode-extensions/images/**"
       ]
     }],
     "sitemap": {

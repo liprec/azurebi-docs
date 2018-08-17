@@ -4,6 +4,9 @@
 - name: VSTS Extensions
   href: vsts-extensions/
   homepage: vsts-extensions/index.md
+- name: VS Code Extensions
+  href: vscode-extensions/
+  homepage: vscode-extensions/index.md
 - name: Community Events
   href: https://azurebi.jppp.org/community-events/
 - name: About Me
