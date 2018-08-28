@@ -22,6 +22,29 @@ Of the hierarchy slicer Power BI custom visualization the following versions are
 
 - Uses new Power BI API
 - Certified custom visual (export capabilities)
+- Introduces Paid support option (optional)
+
+## 1.3.0 - (28 August 2018)
+
+### NEW
+
+- Support for High Contrast mode
+- Add Title Restatement option
+- Header outline can be changed
+
+### CHANGED
+
+- Single level selections will return only the selection on that level, e.g. support for `ISFILTERED()`.
+
+ Example: selecting **2018** at the **Year** level in a date Hierarchy only returns a filter `Year=2018`
+- Entering Focus Mode automatically 'zooms in'
+- Renamed 'Mobile view' settings to 'Zoom mode'
+
+### FIXED
+
+- Select All and Search are not working together
+- Returning from Focus Mode loses selection drawing
+- Incorrectly selecting multiple members with almost the same label
 
 ## 1.2.9 - (3 July 2018)
 
