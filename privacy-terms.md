@@ -10,11 +10,12 @@ system: {
 ## Privacy Terms
 
 *Last updated: November 16, 2017*
+
 My Power BI visuals do not collect or use any of your personal information. The chart only receives data from Power BI and does local computations and rendering in the client browser. No information is transmitted to third-party services.
 
 ## D3JSVisual additonal note
 
-The D3JSVisual fully comply to this privacy statement, but it is possible that the designer of the report/visual adds extra code to the skeleton visual with security or privacy risks; if are some considerations please contact the designer of the report/visual.
+The D3JSVisual fully comply to this privacy statement, but it is possible that the designer of the report/visual adds extra code to the skeleton visual with security or privacy risks; if there are some considerations please contact the designer of the report/visual.
 
 ### Change log
 
