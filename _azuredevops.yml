@@ -6,4 +6,9 @@ steps:
 - powershell: |
    choco install docfx -y
    docfx docfx.json 
-  displayName: 'Build'
+  displayName: 'Build Documentation'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)\_site'
+    ArtifactName: '_site'
+  displayName: 'Publish Artifact: _site'
