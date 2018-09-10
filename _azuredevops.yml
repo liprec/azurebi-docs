@@ -1,0 +1,9 @@
+resources:
+- repo: self
+queue:
+  name: Hosted VS2017
+steps:
+- powershell: |
+   choco install docfx -y
+   docfx docfx.json 
+  displayName: 'Build'
