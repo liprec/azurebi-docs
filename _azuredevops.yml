@@ -9,6 +9,6 @@ steps:
   displayName: 'Build Documentation'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)\_site'
+    PathtoPublish: '$(Build.Repository.LocalPath)\_site'
     ArtifactName: '_site'
   displayName: 'Publish Artifact: _site'
