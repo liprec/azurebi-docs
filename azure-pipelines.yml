@@ -13,7 +13,7 @@ steps:
     TargetFolder: '$(Build.Repository.LocalPath)\_site'
   displayName: 'Copy Files to: $(Build.Repository.LocalPath)\_site'
 - powershell: |
-    postbuild.ps1
+    $(Build.Repository.LocalPath)\postbuild.ps1
   displayName: 'Postbuild actions'
 - task: PublishBuildArtifacts@1
   inputs:
