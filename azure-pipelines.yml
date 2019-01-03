@@ -7,6 +7,14 @@ steps:
    choco install docfx -y
    docfx docfx.json 
   displayName: 'Build Documentation'
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.Repository.LocalPath)\site'
+    TargetFolder: '$(Build.Repository.LocalPath)\_site'
+  displayName: 'Copy Files to: $(Build.Repository.LocalPath)\_site'
+- powershell: |
+    postbuild.ps1
+  displayName: 'Postbuild actions'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.Repository.LocalPath)\_site'
