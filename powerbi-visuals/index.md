@@ -44,6 +44,10 @@ system: {
 - [Changelog](xref:pbi/d3js/changelog)
 - [AppSource listing](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381354?src=website&mktcmpid=overview)
 
+## Support
+ 
+Do you like my free community extensions? Please consider supporting me on [Flattr](https://flattr.com.@liprec) so I can reserve more time in keeping them running and adding more features.
+
 ## Feedback
 
 If you have any comment related to the documentation, like corrections, unclear features or missing documentation, feel free to leave feedback below via GitHub. Or correct it yourself and submit a PR; see [CONTRIBUTING.md](https://github.com/liprec/azurebi-docs/blob/master/.github/CONTRIBUTING.md) for more details.
