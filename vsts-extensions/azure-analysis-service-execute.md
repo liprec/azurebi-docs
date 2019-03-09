@@ -29,6 +29,16 @@ Azure Details:
 Analysis Service Details:
 
 - **Analysis Service name** - The name of the Azure Analysis Service server
+- **Login type** - Type of Azure Analysis Service login: Named user or Service Principal
+
+If **Login type** option is 'ervice Principal':
+
+- **Azure AD TenantID** - Azure ID Tenant ID
+- **Application ID** - Application ID of the Service Principal
+- **Application Key** - Key of the Application ID
+
+If **Login type** option is 'Named User': 
+
 - **Analysis Services Admin** - The admin user use to connect to the Azure Analysis Service instance
 - **Analysis Services Admin Password** - The password of the admin user use to connect to the Azure Analysis Service instance
 
@@ -39,7 +49,19 @@ Script Details:
 - **Inline** - TMSL Script to be executed
 - **Folder** - Folder containing TMSL Script files to be executed
 
+Firewall:
+
+- **Specify Firewall Rules Using** - Auto Detect adds the IP address of the agent to the firewall rules. With the option 'IP Address Range' a start and end IP address of a range needs to be provided
+- **Start IP Address** - Start IP address of the range
+- **End IP Address** - End IP address of the range.
+- **Delete Rule After Task Ends** - Delete the firewall rule at the end of the tasks
+
 ## Release notes
+
+### 1.2.0
+
+- Add support for service principal deployments
+- Add support for adding firewall rules
 
 ### 1.1.2
 

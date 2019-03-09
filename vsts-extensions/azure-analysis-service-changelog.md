@@ -18,7 +18,12 @@ Of the Azure Analysis Service release extension the following versions are relea
 
 ## History
 
-### 1.1.3
+### 1.2.0 - March 3rd, 2019
+
+- Add support for service principal deployments
+- Add support for adding firewall rules
+
+### 1.1.3 - November 27th, 2017
 
 - New: Execute TMSL Script can now have a folder with scripts as input
 - Bugfix: Corrected typo TMSL
