@@ -219,7 +219,7 @@ h6 {
 
 .content h3 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -230,7 +230,7 @@ h6 {
 
 .content h4 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
@@ -309,7 +309,8 @@ h6 {
     box-shadow: none !important;
 }
 
-.content img {
+.content img,
+.logo {
     float: right;
     margin: 1px 2px 1px 5px;
     /* max-height: 250px;
@@ -506,4 +507,9 @@ ul.github-issue {
 .github-issue .right-align {
     float: right;
     margin: -4px 2px 1px auto;
+}
+
+.patreon.logo path,
+.patreon.logo path:hover {
+    fill: rgb(5, 45, 73);
 }

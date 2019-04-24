@@ -15,3 +15,10 @@
   items:
     - name: Changelog
       href: d3js-changelog.md
+- name: Sponsors
+  href: sponsors.md
+  items:
+    - name: Patrons
+      href: patrons.md
+    - name: Become a Patron (external)
+      href: https://www.patreon.com/liprec

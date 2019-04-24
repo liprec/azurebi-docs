@@ -15,7 +15,9 @@ system: {
 
 Of the D3.js Visual for Power BI the following versions are released with the following new features, changes and bug fixes.
 
-*NOTE: All published Power BI custom visuals are distributed via the Azure CDN network and this will cause a delay of max a couple of days in delivering a new version.*
+## Custom Visual Validation Process
+![Custom Visual Validation Process](images/ValidationProcess.png)
+*NOTE: All Power BI gallery visuals are distributed via the Azure CDN network and this will cause a delay of max a couple of days in delivering a new version.*
 
 ## 1.1.0 – (13 December 2017)
 
