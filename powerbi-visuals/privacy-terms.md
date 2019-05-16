@@ -1,5 +1,5 @@
 ---
-uid: privacy-terms.md
+uid: pbi/privacy-terms.md
 title: Power BI Custom Visuals Privacy Terms
 system: {
     document_id: d755ff0c-037d-4b33-9536-96c0a3691379

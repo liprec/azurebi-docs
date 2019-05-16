@@ -4,6 +4,7 @@ title: Visual Studio Team Service extensions
 tags: [
     { "name": "VSTS" }, 
     { "name": "Azure" },
+    { "name": "DevOps" },
     { "name": "release" },
     { "name": "data factory" },
     { "name": "analysis service" }
@@ -12,9 +13,13 @@ system: {
     document_id: a3e3c8b6-d785-4bd4-a648-cd6d472775bb
 }
 ---
-# Visual Studio Team Service extensions
+# Azure DevOps extensions
 
-Overview of my Visual Studio Team Service extensions published in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+Overview of my Azure DevOps extensions published in the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+
+## General
+
+- [Privacy terms](xref:vsts/privacy-terms.md)
 
 ## Azure Analysis Service
 

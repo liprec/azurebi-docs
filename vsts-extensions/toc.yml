@@ -20,3 +20,5 @@
       href: azure-data-factory-pipeline.md
     - name: Changelog
       href: azure-data-factory-changelog.md
+- name: Privacy terms
+  href: privacy-terms.md
