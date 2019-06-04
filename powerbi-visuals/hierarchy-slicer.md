@@ -94,9 +94,8 @@ Configuration of the 'zoom mode' that can be enabled by double clicking on the s
 
 ## Limitations
 
-The current version (v2.0.15) has the following limitations
+The current version (v2.0) has the following limitations
 
-- Sync Slicers are not yet supported: the custom visuals API is preventing this.
 - Visualize the slicer as a dropdown will not happen as the API doesn't support this
 
 ## Changelog
