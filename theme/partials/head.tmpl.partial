@@ -102,6 +102,35 @@
       document_url: document_url
     });
   </script>
+
+  <script type='text/javascript'>
+    //some default pre init
+    var Countly = Countly || {};
+    Countly.q = Countly.q || [];
+
+    //provide countly initialization parameters
+    Countly.app_key = 'f09bcb9235619882f8977617e8b651a3cd20ef28';
+    Countly.url = 'https://c.datascenarios.nl';
+
+    Countly.q.push(['track_sessions']);
+    Countly.q.push(['track_pageview']);
+    Countly.q.push(['track_clicks']);
+    Countly.q.push(['track_scrolls']);
+    Countly.q.push(['track_errors']);
+    Countly.q.push(['track_links']);
+    Countly.q.push(['track_forms']);
+    Countly.q.push(['collect_from_forms']);
+
+    //load countly script asynchronously
+    (function() {
+      var cly = document.createElement('script'); cly.type = 'text/javascript';
+      cly.async = true;
+      //enter url of script here
+      cly.src = 'https://c.datascenarios.nl/sdk/web/countly.min.js';
+      cly.onload = function(){Countly.init()};
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+    })();
+  </script>
   
   <meta property="docfx:navrel" content="{{_navRel}}">
   <meta property="docfx:tocrel" content="{{_tocRel}}">
