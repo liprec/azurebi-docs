@@ -4,6 +4,9 @@ queue:
   name: Hosted VS2017
 steps:
 - powershell: |
+    $(Build.Repository.LocalPath)\prebuild.ps1
+  displayName: 'Prebuild actions'
+- powershell: |
    choco install docfx -y
    docfx docfx.json 
   displayName: 'Build Documentation'
@@ -15,9 +18,17 @@ steps:
 - powershell: |
     $(Build.Repository.LocalPath)\postbuild.ps1
   displayName: 'Postbuild actions'
-- task: PublishBuildArtifacts@1
+- task: CopyFilesOverSSH@0
+  displayName: 'Securely copy files to the remote machine'
   inputs:
-    PathtoPublish: '$(Build.Repository.LocalPath)\_site'
-    ArtifactName: '_site'
-  displayName: 'Publish Artifact: _site'
+    sshEndpoint: 'WebSite (SSH)'
+    sourceFolder: '$(System.DefaultWorkingDirectory)/_site/'
+    targetFolder: '/datadrive/AzureDevOpsDrop/azurebi-docs/$(Build.BuildNumber)/'
+    cleanTargetFolder: true
   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+- task: SSH@0
+  displayName: 'Run shell commands on remote machine'
+  inputs:
+    sshEndpoint: 'WebSite (SSH)'
+    commands: |
+     ln -sfn /datadrive/AzureDevOpsDrop/azurebi-docs/$(Build.BuildNumber) /datadrive/AzureDevOpsDrop/azurebi-docs/current
