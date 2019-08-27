@@ -4,11 +4,11 @@ let productFeedbackOpenIssuesUrl = "";
 let productFeedbackClosedIssuesUrl = ""
 
 if (program_github) {
-    productFeedbackOpenIssuesUrl = `https://api.github.com/repos/${program_github}/issues?state=open&sort=created&order=desc`;
-    productFeedbackClosedIssuesUrl = `https://api.github.com/repos/${program_github}/issues?state=closed&sort=created&order=desc`;    
+    productFeedbackOpenIssuesUrl = 'https://api.github.com/repos/' + program_github + '/issues?state=open&sort=created&order=desc';
+    productFeedbackClosedIssuesUrl = 'https://api.github.com/repos/' + program_github + '/issues?state=closed&sort=created&order=desc';    
 }
-let feedbackOpenIssueUrl = `https://api.github.com/search/issues?q=${document_id}+type%3Aissue+state%3Aopen+in%3Abody+repo%3A${feedbackGitHubRepo}&sort=created&order=desc`;
-let feedbackClosedIssueUrl = `https://api.github.com/search/issues?q=${document_id}+type%3Aissue+state%3Aclosed+in%3Abody+repo%3A${feedbackGitHubRepo}&sort=created&order=desc`;
+let feedbackOpenIssueUrl = 'https://api.github.com/search/issues?q=' + document_id + '+type%3Aissue+state%3Aopen+in%3Abody+repo%3A' + feedbackGitHubRepo + '&sort=created&order=desc';
+let feedbackClosedIssueUrl = 'https://api.github.com/search/issues?q=' + document_id + '+type%3Aissue+state%3Aclosed+in%3Abody+repo%3A' + feedbackGitHubRepo + '&sort=created&order=desc';
 
 $(document).ready(function () {
     $.ajaxSetup({
