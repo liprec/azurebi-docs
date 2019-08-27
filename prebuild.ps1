@@ -1,1 +1,1 @@
-(Get-Content "($env:Build_Repository_LocalPath)\theme\partials\head.tmpl.partial").replace('[BuildNumber]', '($env:Build_BuildNumber)') | Set-Content "($env:Build_Repository_LocalPath)\theme\partials\head.tmpl.partial"
+(Get-Content "$env:Build_Repository_LocalPath\theme\partials\head.tmpl.partial").replace('[BuildNumber]', '$env:Build_BuildNumber') | Set-Content "$env:Build_Repository_LocalPath\theme\partials\head.tmpl.partial"
