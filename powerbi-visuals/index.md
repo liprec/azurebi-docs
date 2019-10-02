@@ -16,7 +16,7 @@ system: {
 
 ## General
 
-- [Privacy terms](xref:privacy-terms.md)
+- [Privacy terms](xref:pbi/privacy-terms.md)
 - [Explanation of Power BI and Azure CDN](https://azurebi.jppp.org/2016/07/20/power-bi-visuals-delivered-via-azure-cdn/)
 - [Visual Studio Code extension for easy development](xref:vscode/pbiviz/overview)
 
@@ -44,9 +44,9 @@ system: {
 - [Changelog](xref:pbi/d3js/changelog)
 - [AppSource listing](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381354?src=website&mktcmpid=overview)
 
-## Support
+## Sponsors
  
-Do you like my free community extensions? Please consider supporting me on [Flattr](https://flattr.com.@liprec) so I can reserve more time in keeping them running and adding more features.
+Do you like my free community extensions? Please consider [supporting](xref:pbi/sponsors) me so I can reserve more time in keeping them running and adding more features.
 
 ## Feedback
 

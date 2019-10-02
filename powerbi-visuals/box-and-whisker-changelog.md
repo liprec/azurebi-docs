@@ -15,6 +15,8 @@ system: {
 
 Of the box and whisker custom visualization the following versions are released with the following new features, changes and bug fixes.
 
+## Custom Visual Validation Process
+![Custom Visual Validation Process](images/ValidationProcess.png)
 *NOTE: All Power BI gallery visuals are distributed via the Azure CDN network and this will cause a delay of max a couple of days in delivering a new version.*
 
 ## 2.0.0 - (21 July 2017)

@@ -14,15 +14,27 @@ system: {
 ---
 # Changelog Hierarchy Slicer
 
-Of the hierarchy slicer Power BI custom visualization the following versions are released with the following new features, changes and bug fixes.
+Of the HierarchySlicer Power BI custom visualization the following versions are released with the following new features, changes and bug fixes.
 
+## Custom Visual Validation Process
+![Custom Visual Validation Process](images/ValidationProcess.png)
 *NOTE: All Power BI gallery visuals are distributed via the Azure CDN network and this will cause a delay of max a couple of days in delivering a new version.*
 
-## 2.x.x - (in development)
+## 2.0.18 - (in 'approved' stage)
 
-- Uses new Power BI API
-- Certified custom visual (export capabilities)
-- Introduces Paid support option (optional)
+### NEW
+
+- Certified custom visual (export capabilities in email and PowerPoint)
+- Added optional tooltips - Page tooltips not yet supported
+- Added software tests and TypeScript option `strictNullChecks=true` for a more robust version
+
+### CHANGED
+- Rewritten and uses the new Power BI API v2.5.0
+- Rewritten (internal) filter logic for support to `ISFILTERED()` DAX function
+
+### FIXED
+
+- Fixed item sorting issue
 
 ## 1.3.0 - (28 August 2018)
 

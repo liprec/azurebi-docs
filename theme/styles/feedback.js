@@ -126,7 +126,7 @@ let loc = {
     numberOpenIssues: "{0} Open",
     emptyOpenIssues: "There are no open issues",
     emptyClosedIssues: "There are no closed issues",
-    githubIssueHeader: "%0A%0A---%0A%23%23%23%23 Document details%0A%0A",
+    githubIssueHeader: "%0A%0A%0A---%0A%23%23%23%23 Document details%0A%0A",
     githubIssueDivider: "<hr>",
     githubIssueLinkWarning: "⚠ Do not edit this section. It is required for docs.jppp.org ➟ GitHub issue linking.",
     githubIssueStart: "*Start issue here*",

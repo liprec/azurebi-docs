@@ -29,7 +29,7 @@ Landing page for all the documentation of my community projects.
 
 ## Support
  
-Do you like my free community extensions? Please consider supporting me on [Flattr](https://flattr.com.@liprec) so I can reserve more time in keeping them running and adding more features.
+Do you like my free community extensions? Please consider supporting me on [Flattr](https://flattr.com/@liprec) so I can reserve more time in keeping them running and adding more features.
 
 ## Feedback
 
