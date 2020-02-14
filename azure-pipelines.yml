@@ -26,7 +26,7 @@ steps:
   displayName: 'sync storage static website'
   inputs:
     azureSubscription: '$(azure.subscription)'
-    scriptType: bash
+    scriptType: batch
     scriptLocation: inlineScript
     inlineScript: 'az storage blob sync -c \$web --account-name azuredocsdatascenarios -s "_site"'
 
