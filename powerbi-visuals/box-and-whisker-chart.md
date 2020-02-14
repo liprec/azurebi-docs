@@ -20,7 +20,7 @@ system: {
 
 ## Example
 
-<iframe width="100%" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiOWJlY2VmNTAtM2EzZC00NzY3LTkyMmUtYzg1NjFmOTRkMWM0IiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9" frameborder="0" onload="let f=document.getElementById('_content');this.height=f.offsetWidth/8*6;" allowFullScreen="true"></iframe>
+<iframe width="100%" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiOWJlY2VmNTAtM2EzZC00NzY3LTkyMmUtYzg1NjFmOTRkMWM0IiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9" frameborder="0" onload="this.height=document.getElementById('_content').offsetWidth/8*6;" allowFullScreen="true"></iframe>
 
 See [here](https://app.powerbi.com/view?r=eyJrIjoiOWJlY2VmNTAtM2EzZC00NzY3LTkyMmUtYzg1NjFmOTRkMWM0IiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9) for an example if the embedded version is not working.
 

@@ -21,7 +21,7 @@ system: {
 
 ## Example
 
-<iframe width="100%" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiYzdjMGQ5NjEtYTUyNS00OWNlLWEwNmMtZDQ2NzVkMTg2N2VmIiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9" frameborder="0" style="" onload="let f=document.getElementById('_content');this.height=f.offsetWidth/8*6;" allowFullScreen="true"></iframe>
+<iframe width="100%" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiYzdjMGQ5NjEtYTUyNS00OWNlLWEwNmMtZDQ2NzVkMTg2N2VmIiwidCI6IjE4NzYxNWY1LWFiYmItNDlhZC1iYjhmLTI1MzM2ZmYxZTk3ZSIsImMiOjh9" frameborder="0" style="" onload="this.height=document.getElementById('_content').offsetWidth/8*6;" allowFullScreen="true"></iframe>
 
 ## Usage
 
