@@ -40,7 +40,7 @@ $(document).ready(function () {
 });
 
 function addIssues(issues, identifier, type) {
-    var parentContainer = $("[id*=${identifier}]");
+    var parentContainer = $("[id*=" + identifier + "}]");
     if (issues.length === 0 || issues.total_count === 0) {
         var msg = identifier.indexOf("open") > 0 ? loc.emptyOpenIssues : loc.emptyClosedIssues;
         parentContainer.html("<p>" + msg + "</p>");
