@@ -28,7 +28,7 @@ steps:
     azureSubscription: '$(azure.subscription)'
     scriptType: batch
     scriptLocation: inlineScript
-    inlineScript: 'az storage blob sync -c \$web --account-name azuredocsdatascenarios -s "_site"'
+    inlineScript: 'az storage blob sync -c $web --account-name azuredocsdatascenarios -s "_site"'
 
 # - task: CopyFilesOverSSH@0
 #   displayName: 'Securely copy files to the remote machine'
