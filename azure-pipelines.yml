@@ -1,3 +1,5 @@
+variables:
+  azure.subscription: 'DataScenarios'
 resources:
 - repo: self
 trigger:
@@ -20,17 +22,25 @@ steps:
 - powershell: |
     $(Build.Repository.LocalPath)\postbuild.ps1
   displayName: 'Postbuild actions'
-- task: CopyFilesOverSSH@0
-  displayName: 'Securely copy files to the remote machine'
+- task: AzureCLI@2
+  displayName: 'sync storage static website'
   inputs:
-    sshEndpoint: 'WebSite (SSH)'
-    sourceFolder: '$(System.DefaultWorkingDirectory)/_site/'
-    targetFolder: '/datadrive/AzureDevOpsDrop/azurebi-docs/$(Build.BuildNumber)/'
-    cleanTargetFolder: true
-  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
-- task: SSH@0
-  displayName: 'Run shell commands on remote machine'
-  inputs:
-    sshEndpoint: 'WebSite (SSH)'
-    commands: |
-     ln -sfn /datadrive/AzureDevOpsDrop/azurebi-docs/$(Build.BuildNumber) /datadrive/AzureDevOpsDrop/azurebi-docs/current
+    azureSubscription: '$(azure.subscription)'
+    scriptType: bash
+    scriptLocation: inlineScript
+    inlineScript: 'az storage blob sync -c \$web --account-name azuredocsdatascenarios -s "_site"'
+
+# - task: CopyFilesOverSSH@0
+#   displayName: 'Securely copy files to the remote machine'
+#   inputs:
+#     sshEndpoint: 'WebSite (SSH)'
+#     sourceFolder: '$(System.DefaultWorkingDirectory)/_site/'
+#     targetFolder: '/datadrive/AzureDevOpsDrop/azurebi-docs/$(Build.BuildNumber)/'
+#     cleanTargetFolder: true
+#   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+# - task: SSH@0
+#   displayName: 'Run shell commands on remote machine'
+#   inputs:
+#     sshEndpoint: 'WebSite (SSH)'
+#     commands: |
+#      ln -sfn /datadrive/AzureDevOpsDrop/azurebi-docs/$(Build.BuildNumber) /datadrive/AzureDevOpsDrop/azurebi-docs/current
