@@ -29,10 +29,3 @@ steps:
     scriptType: batch
     scriptLocation: inlineScript
     inlineScript: 'az storage blob sync -c $web --account-name azuredocsdatascenarios -s "_site"'
-- task: AzureCLI@2
-  displayName: "purge CDN endpoints due to refresh content"
-  inputs:
-      azureSubscription: "$(azure.subscription)"
-      scriptType: bash
-      scriptLocation: inlineScript
-      inlineScript: 'az cdn endpoint purge -g websites -n azuredocsdatascenarios --profile-name DataScenarios --content-paths "/*"'
