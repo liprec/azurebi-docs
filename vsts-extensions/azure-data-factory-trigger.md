@@ -1,6 +1,6 @@
 ---
 uid: vsts/azuredatafactory/trigger
-title: Azure Data Factory (V2) Trigger
+title: Azure Data Factory Trigger
 description: This release task can be added to a release pipeline to either start or stop Azure Data Factory triggers.
 tags: [
     { "name": "VSTS" }, 
@@ -14,26 +14,49 @@ system: {
 }
 ---
 
-# Azure Data Factory (V2) Trigger
+# Azure Data Factory Trigger
 
 This release task can be added to a release pipeline to either start or stop Azure Data Factory triggers.
-![Screenshot of the Trigger Management task](images/adf-screenshot-4.png)
 
-## Parameters
+## YAML Snippet
 
-Azure Details:
+```yaml
+# Azure Data Factory Trigger
+# Satrt or stops an Azure Data Factory trigger
+- task: liprec.vsts-publish-adf.toggle-adf-trigger.toggle-adf-trigger@2
+ displayName: 'Toggle trigger(s) in DataFactory'
+  inputs:
+    #azureSubscription: # Required
+    #ResourceGroupName: # Required
+    #DatafactoryName: # Required
+    #TriggerFilter: # Required
+    #TriggerStatus: 'Start' # Options: start, stop
+    #continue: true # Optional
+    #Throttle: 5 # Optional
+```
 
-- **Azure Connection Type** - Only Azure Resource Manager is supported
-- **Azure RM Subscription** - Which Azure Subscription (Service Endpoint) should be used to connect to the datafactory
-- **Resource Group** - To which Resource Group is the Azure Data Factory deployed
+## Arguments
 
-Data Factory Details:
-
-- **Azure Data Factory** - The name of the Azure Data Factory.
-- **Trigger name** - The name of the Trigger [Optional]. If not defined all trigger will be start/stop.
-- **Set Trigger Status** - The status of the stigger: Start or Stop.
+| Argument | Description |
+|----------|-------------|
+| `azureSubscription`<br>Azure subscription | (Required) Name of Azure Resource Manager service connection.|
+| `ResourceGroupName`<br>Resource group | (Required) Name of the Resource Group containing the Data Factory.|
+| `DatafactoryName`<br>Azure Data Factory | (Required) Name of the Data Factory.|
+| `TriggerFilter`<br>Trigger Filter | (Required) Wildcard filter to determine which triggers to toggled.<br>`*`: all triggers will be deleted.|
+| `TriggerStatus`<br>Set Trigger Status| (Required) The new status of the Azure Data Factory Trigger(s), can be Start or Stop.<br>Default vale: `start`|
+| `continue`<br>Continue on error | (Optional) Continue on a failure of a pipeline trigger.<br>Default value: `false`|
+| `Throttle`<br> Number of parallel actions| (Optional) Number of parallel actions.<br>Default value: `5`.|
 
 ## Release notes
+
+### 2.2
+
+- Added paging support for data factories with more than 50 pipelines
+
+### 2.0
+
+- Rewrite to platform independent version by using NodeJS and REST APIs
+- This version only support Azure Data Factory v2
 
 ### 1.0.4
 

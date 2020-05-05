@@ -1,11 +1,13 @@
 ---
 uid: vsts/azuredatafactory/deploy
 title: Azure Data Factory Deployment
-description: Visual Studio Team Service deploy task that will deploy JSON files with definition of Linked Services, Datasets and/or Pipelines to an existing Azure Data Factory.
+description: This task can be added to an Azure DevOps pipeline to deploy JSON files with definition of Linked Services, Datasets, Dataflows, Pipelines and/or Triggers to an existing Azure Data Factory.
 tags: [
-    { "name": "VSTS" }, 
+    { "name": "AzureDevOps" },
+    { "name": "azure-pipelines" },
     { "name": "Azure" },
     { "name": "release" },
+    { "name": "pipelines" },
     { "name": "data factory" }
 ]
 system: {
@@ -16,34 +18,66 @@ system: {
 
 # Azure Data Factory Deployment
 
-Visual Studio Team Service deploy task that will deploy JSON files with definition of Linked Services, Datasets and/or Pipelines to an existing Azure Data Factory. 
-![Screenshot of the Deploy task](images/adf-screenshot-2.png)
+This task can be added to an Azure DevOps pipeline to deploy JSON files with definition of Linked Services, Datasets, Dataflows, Pipelines and/or Triggers to an existing Azure Data Factory.
 
-## Parameters
+## YAML Snippet
 
-Azure Details:
+```yaml
+# Azure Data Factory Deployment
+# Deploy Azure Data Factory JSON definitions
+- task: liprec.vsts-publish-adf.deploy-adf-json.deploy-adf-json@2
+ displayName: 'Deploy JSON files to DataFactory'
+  inputs:
+    #azureSubscription: # Required
+    #ResourceGroupName: # Required
+    #DatafactoryName: # Required
+    #ServicePath: # Optional
+    #DataflowPath: # Optional
+    #DatasetPath: # Optional
+    #PipelinePath: # Optional
+    #TriggerPath: # Optional
+    #Sorting: ascending # Option: Ascending, Descending
+    #continue: true # Optional
+    #Throttle: 5 # Optional
+```
 
-- **Azure Connection Type** - Only Azure Resource Manager is supported
-- **Azure RM Subscription** - Which Azure Subscription (Service Endpoint) should be used to connect to the datafactory
-- **Resource Group** - To which Resource Group is the Azure Data Factory deployed
+## Arguments
 
-Data Factory Details:
+| Argument | Description |
+|----------|-------------|
+| `azureSubscription`<br>Azure subscription | (Required) Name of Azure Resource Manager service connection.|
+| `ResourceGroupName`<br>Resource group | (Required) Name of the Resource Group containing the Data Factory.|
+| `DatafactoryName`<br>Azure Data Factory | (Required) Name of the Data Factory.|
+| `ServicePath`<br>Path to Linked Service definitions | (Optional) Fully qualified path of the file or folder containing Linked Service JSON definitions.|
+| `DataflowPath`<br>Path to Data flow definitions | (Optional) Fully qualified path of the file or folder containing Data flow JSON definitions.|
+| `DatasetPath`<br>Path to Dataset definitions | (Optional) Fully qualified path of the file or folder containing Dataset JSON definitions.|
+| `PipelinePath`<br>Path to Pipeline definitions | (Optional) Fully qualified path of the file or folder containing Pipeline JSON definitions.|
+| `TriggerPath`<br>Path to Trigger definitions | (Optional) Fully qualified path of the file or folder containing Trigger JSON definitions.|
+| `Sorting`<br>Set sorting direction of the deploy order | (Optional) Order of the filenames in which the definitions are deployed, can be Ascending or Descending.<br>Default value: `ascending`|
+| `continue`<br>Continue on error | (Optional) Continue on a failure of a pipeline trigger.<br>Default value: `false`|
+| `Throttle`<br> Number of parallel actions| (Optional) Number of parallel actions.<br>Default value: `5`.|
 
-- **Azure Data Factory** - The name of the Azure Data Factory
-- **Azure Data Factory Version** - The version of the Azure Data Factory
-- **Path to Linked Services** [Optional] - Path to the folder in the linked artifact in which contains the JSON definitions for the Linked Services
-- **Path to Datasets** [Optional] - Path to the folder in the linked artifact in which contains the JSON definitions for the Datasets
-- **Path to Pipelines** [Optional] - Path to the folder in the linked artifact in which contains the JSON definitions for the Pipelines
-- **Path to Triggers** [Optional] - Path to the folder in the linked artifact in which contains the JSON definitions for the Triggers. Only available in V2.
+## Additional notes
 
-Advanced:
+- The task doesn't know any dependencies between items of the same type. If dependancy is needed, this has to be solved in either the item names or use multiple tasks. So if **pipeline B** reference **pipeline A**, **pipeline B** needs to be deleted *before* **pipeline A**.
 
-- **Overwrite** - Option to overwrite existing definitions with the new ones.
-- **Continue on Error** - Option to continue deploying after errors occur.
-- **Clear before Deploy** - Option to clear the existing difitions before new ones are deployed. Only if a path to Linked Service/Datasets/Pipelines are provided the existing will be cleared.
-- **Parallel tasks** - [Future use]Option to set the number of parallel processes.
+- The deploy task will start deloying items in to following order:
+    - Linked Servces
+    - Datasets
+    - Data flows
+    - Pipelines
+    - Triggers
 
 ## Release notes
+
+### 2.2
+
+- Added paging support for data factories with more than 50 pipelines
+
+### 2.0
+
+- Rewrite to platform independent version by using NodeJS and REST APIs
+- This version only support Azure Data Factory v2
 
 ### 1.1.8
 

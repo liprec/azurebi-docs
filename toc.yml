@@ -1,7 +1,7 @@
 - name: Power BI Visuals
   href: powerbi-visuals/
   homepage: powerbi-visuals/index.md
-- name: VSTS Extensions
+- name: Azure DevOps
   href: vsts-extensions/
   homepage: vsts-extensions/index.md
 - name: VS Code Extensions

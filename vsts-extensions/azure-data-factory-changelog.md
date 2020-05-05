@@ -18,6 +18,17 @@ Of the Azure Data Factory release extension the following versions are released 
 
 ## History
 
+### **2.2**
+
+- Added paging support for data factories with more than 50 pipelines
+- Added support for deployments of Dataflows
+
+### **2.0**
+
+- Rewrite to platform independent version by using NodeJS and REST APIs
+- This version only support Azure Data Factory v2
+- Add new task to trigger pipeline runs
+
 ### 1.5.7
 
 - Added support for V2 deployments

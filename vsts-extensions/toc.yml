@@ -1,4 +1,4 @@
-- name: Visual Studio Team Service extensions
+- name: Azure DevOps extensions
   href: index.md
 - name: Azure Analysis Service
   href: azure-analysis-service.md
@@ -12,12 +12,16 @@
 - name: Azure Data Factory
   href: azure-data-factory.md
   items:
-    - name: Deploy task
+    - name: Delete Items task
+      href: azure-data-factory-delete.md
+    - name: Deployment task
       href: azure-data-factory-deploy.md
-    - name: Trigger task
+    - name: Trigger Management task
       href: azure-data-factory-trigger.md
-    - name: Pipeline task
+    - name: Pipelines Management task
       href: azure-data-factory-pipeline.md
+    - name: Pipelines Trigger task
+      href: azure-data-factory-pipeline-trigger.md
     - name: Changelog
       href: azure-data-factory-changelog.md
 - name: Privacy terms

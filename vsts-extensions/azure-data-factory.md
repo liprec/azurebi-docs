@@ -1,9 +1,10 @@
 ---
 uid: vsts/azuredatafactory/overview
 title: Azure Data Factory release extension
-description: This extension adds release tasks related to Azure Data Factory (V1 and V2) to Visual Studio Team Service.
+description: This extension adds release tasks related to Azure Data Factory (V2 only supported) to Azure DevOps.
 tags: [
-    { "name": "VSTS" }, 
+    { "name": "AzureDevOps" },
+    { "name": "azure-pipelines" },
     { "name": "Azure" },
     { "name": "release" },
     { "name": "Data Factory" }
@@ -16,28 +17,37 @@ system: {
 
 # Azure Data Factory
 
-This extension adds release tasks related to Azure Data Factory (V1 and V2) to Visual Studio Team Service.
+This extension adds release tasks related to Azure Data Factory (V2 only supported) to Azure DevOps.
+
+## Azure Data Factory Delete Items
+
+This task can be added to an Azure DevOps pipeline to delete Linked Services, Datasets, Dataflows, Pipelines and/or Triggers from an existing Azure Data Factory.
+
+[More information](xref:vsts/azuredatafactory/delete)
 
 ## Azure Data Factory Deployment
 
-Visual Studio Team Service deploy task that will deploy JSON files with definition of Linked Services, Datasets, Pipelines and/or Triggers (V2) to an existing Azure Data Factory. 
-![Screenshot of the Deploy task](images/adf-screenshot-2.png)
+This task can be added to an Azure DevOps pipeline to deploy JSON files with definition of Linked Services, Datasets, Dataflows, Pipelines and/or Triggers to an existing Azure Data Factory. 
 
 [More information](xref:vsts/azuredatafactory/deploy)
 
 ## Azure Data Factory Trigger Management
 
-This release task can be added to a release pipeline to either start or stop Azure Data Factory V2 triggers.
-![Screenshot of the Trigger Management task](images/adf-screenshot-4.png)
+This task can be added to an Azure DevOps pipeline to either start or stop Azure Data Factory triggers of an existing Azure Data Factory.
 
 [More information](xref:vsts/azuredatafactory/trigger)
 
 ## Azure Data Factory Pipelines Management
 
-This release task can be added to a release pipeline to either suspend or resume all pipelines of an Azure Data Factory.
-![Screenshot of the Pipeline Management task](images/adf-screenshot-3.png)
+This task can be added to an Azure DevOps pipeline to either suspend or resume all pipelines of an Azure Data Factory  of an existing Azure Data Factory.
 
 [More information](xref:vsts/azuredatafactory/pipeline)
+
+## Azure Data Factory Pipelines Trigger
+
+This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory pipeline(s) run of an existing Azure Data Factory.
+
+[More information](xref:vsts/azuredatafactory/pipelinetrigger)
 
 ## Feedback
 

@@ -513,3 +513,26 @@ ul.github-issue {
 .patreon.logo path:hover {
     fill: rgb(5, 45, 73);
 }
+
+code {
+    direction: ltr;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+}
+
+.lang-yaml .hljs-comment {
+    color: #008000;
+}
+
+.lang-yaml .hljs-attr {
+    color: #0451a5;
+}
+
+.lang-yaml .hljs-code,
+.lang-yaml .hljs-deletion,
+.lang-yaml .hljs-section,
+.lang-yaml .hljs-string,
+.lang-yaml .hljs-string .hljs-subst .hljs-string,
+.lang-yaml .hljs-template-tag,
+.lang-yaml .hljs-template-variable {
+    color: #a31515;
+}

@@ -18,6 +18,11 @@ Of the Azure Analysis Service release extension the following versions are relea
 
 ## History
 
+### 1.3 - May 2020
+
+- Bug fix for Remove before Deploy
+- Add extra removal of firewall leftovers
+
 ### 1.2.0 - March 3rd, 2019
 
 - Add support for service principal deployments

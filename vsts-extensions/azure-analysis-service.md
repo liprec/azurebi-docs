@@ -1,11 +1,13 @@
 ---
 uid: vsts/azureanalysisservice/overview
 title: Azure Analysis Service release extension
-description: This extension adds release tasks related to Azure Analysis Service to Visual Studio Team Service.
+description: This extension adds release tasks related to Azure Analysis Service to Azure DevOps.
 tags: [
-    { "name": "VSTS" }, 
+    { "name": "AzureDevOps" },
+    { "name": "azure-pipelines" }, 
     { "name": "Azure" },
     { "name": "release" },
+    { "name": "pipelines" },
     { "name": "Analysis Service" }
 ]
 system: {
@@ -15,12 +17,11 @@ system: {
 ---
 # Azure Analysis Service
 
-This extension adds release tasks related to Azure Analysis Service to Visual Studio Team Service.
+This extension adds release tasks related to Azure Analysis Service to Azure DevOps.
 
 ## Azure Analysis Service Deployment
 
-Visual Studio Team Service deploy task that will deploy a Tabular model to an existing Azure Analysis Service instance. Also option to change the connected source datasource during release.
-![Screenshot of the Deploy task](images/aas-screenshot-2.png)
+Azure DevOps deploy task that will deploy a Tabular model to an existing Azure Analysis Service instance. Also option to change the connected source datasource during release.
 
 At this moment the following configuration are tested and working:
 
@@ -32,8 +33,7 @@ More configuration will follow. Feel free to contact me for a specific configura
 
 ## Azure Analysis Service TMSL Script
 
-This release task can be added to a release pipeline to execute a custom TMSL script against an Azure Analysis Service instance.
-![Screenshot of the TMSL Script task](images/aas-screenshot-3.png)
+Azure DevOps task can be added to a pipeline to execute a custom TMSL script against an Azure Analysis Service instance.
 
 [More information](xref:vsts/azureanalysisservice/execute)
 
