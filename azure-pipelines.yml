@@ -29,18 +29,10 @@ steps:
     scriptType: batch
     scriptLocation: inlineScript
     inlineScript: 'az storage blob sync -c $web --account-name azuredocsdatascenarios -s "_site"'
-
-# - task: CopyFilesOverSSH@0
-#   displayName: 'Securely copy files to the remote machine'
-#   inputs:
-#     sshEndpoint: 'WebSite (SSH)'
-#     sourceFolder: '$(System.DefaultWorkingDirectory)/_site/'
-#     targetFolder: '/datadrive/AzureDevOpsDrop/azurebi-docs/$(Build.BuildNumber)/'
-#     cleanTargetFolder: true
-#   condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
-# - task: SSH@0
-#   displayName: 'Run shell commands on remote machine'
-#   inputs:
-#     sshEndpoint: 'WebSite (SSH)'
-#     commands: |
-#      ln -sfn /datadrive/AzureDevOpsDrop/azurebi-docs/$(Build.BuildNumber) /datadrive/AzureDevOpsDrop/azurebi-docs/current
+- task: AzureCLI@2
+  displayName: "purge CDN endpoints due to refresh content"
+  inputs:
+      azureSubscription: "$(azure.subscription)"
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: 'az cdn endpoint purge -g websites -n azuredocsdatascenarios --profile-name DataScenarios --content-paths "/*"'
