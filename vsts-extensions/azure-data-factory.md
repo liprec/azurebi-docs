@@ -37,17 +37,17 @@ This task can be added to an Azure DevOps pipeline to either start or stop Azure
 
 [More information](xref:vsts/azuredatafactory/trigger)
 
-## Azure Data Factory Pipelines Management
-
-This task can be added to an Azure DevOps pipeline to either suspend or resume all pipelines of an Azure Data Factory  of an existing Azure Data Factory.
-
-[More information](xref:vsts/azuredatafactory/pipeline)
-
 ## Azure Data Factory Pipelines Trigger
 
 This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory pipeline(s) run of an existing Azure Data Factory.
 
 [More information](xref:vsts/azuredatafactory/pipelinetrigger)
+
+## [DEPRECATED] Azure Data Factory Pipelines Management
+
+This task can be added to an Azure DevOps pipeline to either suspend or resume all pipelines of an Azure Data Factory  of an existing Azure Data Factory.
+
+[More information](xref:vsts/azuredatafactory/pipeline)
 
 ## Feedback
 
