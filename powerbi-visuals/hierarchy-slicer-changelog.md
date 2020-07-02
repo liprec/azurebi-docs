@@ -20,7 +20,21 @@ Of the HierarchySlicer Power BI custom visualization the following versions are 
 ![Custom Visual Validation Process](images/ValidationProcess.png)
 *NOTE: All Power BI gallery visuals are distributed via the Azure CDN network and this will cause a delay of max a couple of days in delivering a new version.*
 
-## 2.0.18 - (in 'approved' stage)
+## 2.1.1 - (July 2020)
+
+### NEW
+
+- Support for single-select and multi-select via the Ctrl-key
+- Support for only electing leaf level items
+- Default color are now inherited of the theme, [see](xref:pbi/hierarchyslicer/overview)
+
+## CHANGED
+
+- Support for Report Page tooltips
+- Tooltips now only triggered via additional icon
+- Change in databinding, in rare situation this can cause issues. Please recreate the hierarchy to solve this
+
+## 2.0.18 - (October 2019)
 
 ### NEW
 
