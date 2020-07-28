@@ -29,12 +29,18 @@ $(document).ready(function () {
     });
     if ((program_github) && ($("[data-tab=product-open]"))) {
         $.getJSON(productFeedbackOpenIssuesUrl, function (allIssues) {
-            $("[data-tab=product-open]")[0].innerHTML = loc.numberOpenIssues.replace('{0}', allIssues.length);
-            addIssues(allIssues, "product-open", feedbackType.product);
+            const productOpen = $("[data-tab=product-open]")[0];
+            if (productOpen) {
+                productOpen.innerHTML = loc.numberOpenIssues.replace('{0}', allIssues.length);
+                addIssues(allIssues, "product-open", feedbackType.product);
+            }
         });
         $.getJSON(productFeedbackClosedIssuesUrl, function (allIssues) {
-            $("[data-tab=product-closed]")[0].innerHTML = loc.numberClosedIssues.replace('{0}', allIssues.length);
-            addIssues(allIssues, "product-closed", feedbackType.product);
+            const productClosed = $("[data-tab=product-closed]")[0];
+            if (productClosed) {
+                productClosed.innerHTML = loc.numberClosedIssues.replace('{0}', allIssues.length);
+                addIssues(allIssues, "product-closed", feedbackType.product);
+            }
         });
     }
 });
@@ -48,9 +54,14 @@ function addIssues(issues, identifier, type) {
     else {
         $.each(issues, function (i, issue) {
             var timeSpan = timeAgo(Date.now(), new Date(issue.created_at));
-            var body = issue.body_html.split(loc.githubIssueDivider)[0];
+            var issueBody = issue.body_html;
+            var body
+            if (issueBody) {
+                body = issueBody.split(loc.githubIssueDivider)[0];
+            }
             parentContainer
                 .append("\n                    <ul class=\"github-issue\">\n                        <li>\n                            <article>\n                                <div class=\"github-issue\">\n                                    <a href=\"" + issue.html_url + "\" class=\"right-align noline\" target=\"_new\">\n                                        <span class=\"docon docon-comment-outline\" aria-hidden=\"true\"></span>\n                                        <span>" + issue.comments + "</span>\n                                    </a>\n                                    <h3>" + issue.title + "</h3>\n                                    <span id=\"issue-expander\" issue=\"" + issue.number + "\" class=\"expand-indicator text-subtle docon docon-chevron-right-light\" aria-hidden=\"true\"></span>\n                                    <div class=\"issue-body\" id=\"issue-" + issue.number + "-body\"  data-bi-name=\"issue-body\">\n                                        " + body + "\n                                    </div>\n\t\t\t\t\t\t            <div class=\"issue-footer\">\n                                        <div class=\"text-subtle\">\n                                            <a title=\"View this issue on GitHub\" class=\"issue-number\" href=\"" + issue.html_url + "\" target=\"_new\"><cite>#" + issue.number + "</cite></a>\n                                            opened <time datetime=\"" + issue.created_at + "\">" + timeSpan + "</time> by <a title=\"View " + issue.user.login + " on GitHub\" class=\"issue-author\" href=\"" + issue.user.html_url + "\" target=\"_new\">" + issue.user.login + "</a>\n                                        </div>\n                                    </div>\n                                </div>\n                            </article>\n                        </li>\n                    </ul>\n                ");
+            
         });
         $("[id=issue-expander]").click(function (event) {
             if (event.isDefaultPrevented()) {
