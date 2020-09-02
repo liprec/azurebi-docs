@@ -109,7 +109,7 @@ Configuration of the 'zoom mode' that can be enabled by double clicking on the s
 
 ## Theme colors
 
-The HierarchySlicer uses the colorpalette of the choosen Power BI theme, [see](https://docs.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes#setting-structural-colors):
+The HierarchySlicer uses the colorpalette of the choosen Power BI theme, [see](https://docs.microsoft.com/en-us/power-bi/create-reports/desktop-report-themes?WT.mc_id=DP-MVP-5003419#setting-structural-colors):
 
 | Color class           | What it formats                        |
 |-----------------------|----------------------------------------|

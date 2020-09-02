@@ -88,7 +88,7 @@ To render a portion of a file as a snippet by using line numbers:
 [!code-html[Main](configuration/index/sample/Views/Home/Index.cshtml?range=1-10,20,30,40-50]
 ```
 
-For C# snippets, you can reference a [C# region](https://docs.microsoft.com/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region). Whenever possible, use regions rather than line numbers, because line numbers in a code file tend to change and get out of sync with line number references in Markdown. C# regions can be nested, and if you reference the outer region, the inner `#region` and `#endregion` directives are not rendered in a snippet. 
+For C# snippets, you can reference a [C# region](https://docs.microsoft.com/dotnet/csharp/language-reference/preprocessor-directives/preprocessor-region?WT.mc_id=DP-MVP-5003419). Whenever possible, use regions rather than line numbers, because line numbers in a code file tend to change and get out of sync with line number references in Markdown. C# regions can be nested, and if you reference the outer region, the inner `#region` and `#endregion` directives are not rendered in a snippet. 
 
 To render a C# region named "snippet_Example":
 
@@ -107,7 +107,7 @@ To highlight selected lines in a rendered snippet (usually renders as yellow bac
 
 ## Test your changes with DocFX
 
-Test your changes with the [DocFX command-line tool](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool), which creates a locally hosted version of the site. DocFX doesn't render style and site extensions created for docs.microsoft.com.
+Test your changes with the [DocFX command-line tool](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html?WT.mc_id=DP-MVP-5003419#2-use-docfx-as-a-command-line-tool), which creates a locally hosted version of the site. DocFX doesn't render style and site extensions created for docs.microsoft.com.
 
 DocFX requires the .NET Framework on Windows, or Mono for Linux or macOS. 
 
@@ -144,5 +144,5 @@ mono $HOME/bin/docfx/docfx.exe serve _site
 
 ## Style, voice and tone
 
-My goal is to write documentation that is easily understandable by the widest possible audience. I try to follow the [Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) Microsoft has written for their documantation and I ask my contributors to follow. It provides writing style and terminology guidance for all forms of technology communication.
+My goal is to write documentation that is easily understandable by the widest possible audience. I try to follow the [Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/?WT.mc_id=DP-MVP-5003419) Microsoft has written for their documantation and I ask my contributors to follow. It provides writing style and terminology guidance for all forms of technology communication.
 Regarding Voise and tone, see [Microsoft .NET: Voice and tone guidelines](https://github.com/dotnet/docs/blob/master/styleguide/voice-tone.md) for more information.

@@ -20,6 +20,16 @@ Of the HierarchySlicer Power BI custom visualization the following versions are 
 ![Custom Visual Validation Process](images/ValidationProcess.png)
 *NOTE: All Power BI gallery visuals are distributed via the Azure CDN network and this will cause a delay of max a couple of days in delivering a new version.*
 
+## 2.1.4 - (Augustus 2020)
+
+### CHANGED
+
+- Long items are now corectly supported with overflow and ends with three dots (...)
+
+### FIXED
+
+- Issue with the rendering of the visual with a Firefox browser
+
 ## 2.1.3 - (July 2020)
 
 ### NEW
