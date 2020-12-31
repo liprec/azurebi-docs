@@ -39,6 +39,7 @@ This task can be added to an Azure DevOps pipeline to deploy JSON files with def
     #Sorting: ascending # Option: Ascending, Descending
     #continue: true # Optional
     #Throttle: 5 # Optional
+    #detectDependancy: false # Option: true, false
 ```
 
 ## Arguments
@@ -56,6 +57,7 @@ This task can be added to an Azure DevOps pipeline to deploy JSON files with def
 | `Sorting`<br>Set sorting direction of the deploy order | (Optional) Order of the filenames in which the definitions are deployed, can be Ascending or Descending.<br>Default value: `ascending`|
 | `continue`<br>Continue on error | (Optional) Continue on a failure of a pipeline trigger.<br>Default value: `false`|
 | `Throttle`<br> Number of parallel actions| (Optional) Number of parallel actions.<br>Default value: `5`.|
+| `detectDependancy`<br>Detect object dependancy | Option to scan deployment files to detect dependancy between the same objects types. This dependancy is used to sort the deploy order. |
 
 ## Additional notes
 

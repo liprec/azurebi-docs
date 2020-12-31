@@ -39,6 +39,7 @@ This task can be added to an Azure DevOps pipeline to delete Linked Services, Da
     #Sorting: descending # Option: Ascending, Descending
     #continue: true # Optional
     #Throttle: 5 # Optional
+    #detectDependancy: false # Option: true, false
 ```
 
 ## Arguments
@@ -55,7 +56,8 @@ This task can be added to an Azure DevOps pipeline to delete Linked Services, Da
 | `TriggerFilter`<br>Filter to Trigger definitions | (Optional) Wildcard filter to determine which Trigger(s) to delete.<br>`*`: all triggers will be deleted|
 | `Sorting`<br>Set sorting direction of the deploy order | (Optional) Sort order of the items to be deleted, can be Ascending or Descending.<br>Default value: `descending`|
 | `continue`<br>Continue on error | (Optional) Continue on a failure of a pipeline trigger.<br>Default value: `false`|
-| `Throttle`<br> Number of parallel actions| (Optional) Number of parallel actions.<br>Default value: `5`.|
+| `Throttle`<br>Number of parallel actions| (Optional) Number of parallel actions.<br>Default value: `5`.|
+| `detectDependancy`<br>Detect object dependancy | Option to scan deployment files to detect dependancy between the same objects types. This dependancy is used to sort the deploy order. |
 
 ## Additional notes
 
