@@ -23,8 +23,8 @@ This release task can be added to a release pipeline to either start or stop Azu
 ```yaml
 # Azure Data Factory Trigger
 # Satrt or stops an Azure Data Factory trigger
-- task: liprec.vsts-publish-adf.toggle-adf-trigger.toggle-adf-trigger@2
- displayName: 'Toggle trigger(s) in DataFactory'
+- task: toggle-adf-trigger@2
+  displayName: 'Toggle trigger(s) in DataFactory'
   inputs:
     #azureSubscription: # Required
     #ResourceGroupName: # Required

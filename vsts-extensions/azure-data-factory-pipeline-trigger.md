@@ -25,8 +25,8 @@ This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory
 ```yaml
 # Azure Data Factory Trigger Pipeline
 # Trigger a Azure Data Factory pipeline run
-- task: liprec.vsts-publish-adf.trigger-adf-pipeline.trigger-adf-pipeline@2
- displayName: 'Trigger pipeline run DataFactory'
+- task: trigger-adf-pipeline@2
+  displayName: 'Trigger pipeline run DataFactory'
   inputs:
     #azureSubscription: # Required
     #ResourceGroupName: # Required

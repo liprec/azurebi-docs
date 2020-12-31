@@ -18,6 +18,12 @@ Of the Azure Data Factory release extension the following versions are released 
 
 ## History
 
+### **2.3**
+
+- Added support for dependencies between pipelines and linked services
+- Added release gate (serverless task) for active runs
+- Changed filters (trigger/delete task) to RegEx filters 
+
 ### **2.2**
 
 - Added paging support for data factories with more than 50 pipelines

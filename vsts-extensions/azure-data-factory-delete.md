@@ -25,8 +25,8 @@ This task can be added to an Azure DevOps pipeline to delete Linked Services, Da
 ```yaml
 # Azure Data Factory Delete Items
 # Delete Azure Data Factory items
-- task: liprec.vsts-publish-adf.delete-adf-items.delete-adf-items@2
- displayName: 'Delete items from DataFactory'
+- task: delete-adf-items@2
+  displayName: 'Delete items from DataFactory'
   inputs:
     #azureSubscription: # Required
     #ResourceGroupName: # Required

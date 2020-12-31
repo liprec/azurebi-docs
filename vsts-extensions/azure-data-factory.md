@@ -43,6 +43,12 @@ This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory
 
 [More information](xref:vsts/azuredatafactory/pipelinetrigger)
 
+## Query Azure Data Factory runs
+
+This release task can be added to a release pipeline to obsorve active Azure Data Factory runs.
+
+[More information](xref:vsts/azuredatafactory/query)
+
 ## [DEPRECATED] Azure Data Factory Pipelines Management
 
 This task can be added to an Azure DevOps pipeline to either suspend or resume all pipelines of an Azure Data Factory  of an existing Azure Data Factory.

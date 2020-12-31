@@ -25,8 +25,8 @@ This task can be added to an Azure DevOps pipeline to deploy JSON files with def
 ```yaml
 # Azure Data Factory Deployment
 # Deploy Azure Data Factory JSON definitions
-- task: liprec.vsts-publish-adf.deploy-adf-json.deploy-adf-json@2
- displayName: 'Deploy JSON files to DataFactory'
+- task: deploy-adf-json@2
+  displayName: 'Deploy JSON files to DataFactory'
   inputs:
     #azureSubscription: # Required
     #ResourceGroupName: # Required
