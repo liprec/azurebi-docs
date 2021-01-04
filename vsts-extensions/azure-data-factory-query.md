@@ -19,7 +19,7 @@ system: {
 This release task can be added to a release pipeline to obsorve active Azure Data Factory runs. This task can run as a serverless task or configured as [Gate](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops&WT.mc_id=DP-MVP-5003419)
 
 
-### [**YAML**](#tab/docs-closed)
+### [**YAML**](#tab/yaml)
 
 > [!NOTE]
 > Currently the YAML definitions do not support the 're-evaluation' options of gates
@@ -58,7 +58,7 @@ This release task can be added to a release pipeline to obsorve active Azure Dat
 | `lastUpdatedBefore`<br>End time of the run event window | (Optional) The time at or before which the run event was updated in 'ISO 8601' format. Default value is December 31st, 2199 |
 | `result`<br>Expected results | (Optional) Option to determine if the result should contain result (runs). Default value: 'false' |
 
-### [**Classic**](#tab/docs-open)
+### [**Classic**](#tab/classic)
 
 ![Screenshot of the Query Azure Data Factory runs](images/adf-screenshot-7.png)
 

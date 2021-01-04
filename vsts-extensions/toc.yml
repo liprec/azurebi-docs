@@ -18,6 +18,8 @@
       href: azure-data-factory-deploy.md
     - name: Pipelines Trigger task
       href: azure-data-factory-pipeline-trigger.md
+    - name: Query Azure Data Factory runs
+      href: azure-data-factory-query.md
     - name: Trigger task
       href: azure-data-factory-trigger.md
     - name: Changelog
