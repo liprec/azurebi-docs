@@ -78,6 +78,9 @@ This release task can be added to a release pipeline to obsorve active Azure Dat
 
 ***
 
+> [!TIP]
+> For the 'Start time of the run event window' (`lastUpdatedAfter`) the pipeline variable `$(Release.Deployment.StartTime)` can be used to query for events that happen after the pipeline is started
+
 ## Release notes
 
 ### 2.2
