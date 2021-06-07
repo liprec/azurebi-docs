@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  push:
+    branches: [live]
+  pull_request:
+    branches: [live]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: set version number
+        run: |
+          $version = Get-Date -Format "yyyyMMdd"
+          $runid = "${env:GITHUB_RUN_NUMBER}"
+          $content = Get-Content "./theme/partials/head.tmpl.partial"
+          $newContent = $content -replace "\[APPID\]", "${{ secrets.APPID }}"
+          $newContent2 = $newContent -replace "\[BuildNumber\]", "$version.$runid"
+          Set-Content "./theme/partials/head.tmpl.partial" -Value $newContent2
+        shell: pwsh
+      - name: choco install docfx
+        run: |
+          choco install docfx -y
+        env:
+          CI: true
+      - name: build documentation
+        run: |
+          docfx build
+      - name: postbuild
+        run: |
+          ./postbuild.ps1
+      - name: Deploy
+        id: builddeploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
+          action: "upload"
+          skip_app_build: true
+          app_location: "/docs" 
