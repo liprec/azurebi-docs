@@ -43,6 +43,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: _site
+          path: _site
       - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -51,4 +52,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
           skip_app_build: true
-          app_location: "/_site" 
+          app_location: "_site" 
