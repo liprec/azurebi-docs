@@ -51,4 +51,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for Github integrations (i.e. PR comments)
           action: "upload"
           skip_app_build: true
-          app_location: "azurebi-docs/_site" 
+          app_location: "/_site" 
