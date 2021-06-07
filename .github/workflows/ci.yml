@@ -31,6 +31,17 @@ jobs:
       - name: postbuild
         run: |
           ./postbuild.ps1
+      - name: build results
+        uses: actions/upload-artifact@v2
+        with:
+          name: docs
+          path: docs/
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: docs
       - name: Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
