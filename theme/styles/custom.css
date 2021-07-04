@@ -241,15 +241,12 @@ h6 {
 
 .content h5 {
     display: block;
-    margin: 0.5em 0;
-    padding: 1em 0 1.5em;
     border: 0;
     color: var(--blue);
-    font-family: Georgia,serif;
     font-size: 3.2rem;
     line-height: 1.35em;
-    text-align: center;
 }
+
 @media (min-width: 1180px) {
     .content h5 {
         width: 100vw;

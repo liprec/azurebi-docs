@@ -5,6 +5,11 @@
   items:
     - name: Changelog
       href: box-and-whisker-changelog.md
+- name: Event Viewer
+  href: event-viewer.md
+  items:
+    - name: Changelog
+      href: event-viewer-changelog.md
 - name: Hierarchy Slicer
   href: hierarchy-slicer.md
   items:

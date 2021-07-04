@@ -28,6 +28,14 @@ system: {
 - [Changelog](xref:pbi/boxandwhisker/changelog)
 - [AppSource listing](https://appsource.microsoft.com/product/power-bi-visuals/WA104380831?src=website&mktcmpid=overview)
 
+## Event Viewer
+
+![Event Viewer](images/EventViewer-thumbnail.png).
+
+- [Overview](xref:pbi/eventviewer/overview)
+- [Changelog](xref:pbi/eventviewer/changelog)
+- [AppSource listing]()
+
 ## Hierarchy Slicer
 
 ![Hierarchy Slicer](images/HierarchySlicer.png)With the hierarchy slicer it is possible to represent a hierarchy as a single slicer. The different levels are shown as a tree.

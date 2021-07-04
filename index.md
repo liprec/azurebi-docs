@@ -12,6 +12,7 @@ Landing page for all the documentation of my community projects.
 ## Power BI Custom Visuals
 
 - [Box and Whisker Chart](xref:pbi/boxandwhisker/overview)
+- [Event Viewer](xref:pbi/eventviewer/overview)
 - [HierarchySlicer](xref:pbi/hierarchyslicer/overview)
 - [D3.js Visual](xref:pbi/d3js/overview)
 
