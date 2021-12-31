@@ -1,39 +1,36 @@
 ---
 uid: vsts/azureanalysisservice/overview
-title: Azure Analysis Service release extension
-description: This extension adds release tasks related to Azure Analysis Service to Azure DevOps.
+title: Analysis Service pipeline extension
+description: This extension adds Azure DevOps pipeline tasks for Azure Analysis Service or Power BI Premium
 tags: [
-    { "name": "AzureDevOps" },
     { "name": "azure-pipelines" }, 
     { "name": "Azure" },
-    { "name": "release" },
     { "name": "pipelines" },
-    { "name": "Analysis Service" }
+    { "name": "Azure pipelines" },
+    { "name": "Analysis Service" },
+    { "name": "Power BI Premium" },
+    { "name": "XMLA" },
+    { "name": "Azure DevOps" }
+    { "name": "TMSL" }
 ]
 system: {
     document_id: dcb1b597-e63d-4180-ac35-79d8db8bae4d,
     program_github: liprec/vsts-release-aas
 }
 ---
-# Azure Analysis Service
+# Analysis Service pipeline extension
 
-This extension adds release tasks related to Azure Analysis Service to Azure DevOps.
+This extension adds Azure DevOps pipeline tasks for Azure Analysis Service or Power BI Premium.
 
-## Azure Analysis Service Deployment
+## Tabular Database Deployment
 
-Azure DevOps deploy task that will deploy a Tabular model to an existing Azure Analysis Service instance. Also option to change the connected source datasource during release.
-
-At this moment the following configuration are tested and working:
-
-- Model 1400 and a single SQL Server database as datasource
-
-More configuration will follow. Feel free to contact me for a specific configuration.
+Azure DevOps pipeline task that will deploy a Tabular Model to an existing Azure Analysis Service or Power BI Premium dataset.
 
 [More information](xref:vsts/azureanalysisservice/deploy)
 
-## Azure Analysis Service TMSL Script
+## TMSL Script
 
-Azure DevOps task can be added to a pipeline to execute a custom TMSL script against an Azure Analysis Service instance.
+Azure DevOps pipeline task to execute a custom TMSL script against an Azure Analysis Service or Power BI Premium dataset.
 
 [More information](xref:vsts/azureanalysisservice/execute)
 

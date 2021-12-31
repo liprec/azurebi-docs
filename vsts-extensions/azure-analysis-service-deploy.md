@@ -1,115 +1,179 @@
 ---
 uid: vsts/azureanalysisservice/deploy
-title: Azure Analysis Service deployment
-description: Azure DevOps pipeline task that will deploy a Azure Analysis Service Model to an existing Azure Analysis Service.
+title: Tabular Database Deployment - Analysis Service 
+description: Azure DevOps pipeline task that will deploy a Tabular Model to an existing Azure Analysis Service or Power BI Premium dataset. 
 tags: [
-    { "name": "AzureDevOps" },
     { "name": "azure-pipelines" }, 
     { "name": "Azure" },
-    { "name": "release" },
     { "name": "pipelines" },
-    { "name": "Analysis Service" }
+    { "name": "Azure pipelines" },
+    { "name": "Analysis Service" },
+    { "name": "Power BI Premium" },
+    { "name": "XMLA" },
+    { "name": "Azure DevOps" }
 ]
 system: {
     document_id: 4381b0c0-3a30-42ba-ad70-47e99b1994e1
 }
 ---
-# Azure Analysis Service deployment
+# Tabular Database Deployment
 
-Visual Studio Team Service deploy task that will deploy a Azure Analysis Service Model to an existing Azure Analysis Service.
+Azure DevOps pipeline task that will deploy a Tabular Model to an existing Azure Analysis Service or Power BI Premium dataset.
 
 ## YAML Snippet
 
-```yaml
-# Azure Analysis Service deployment
-# Deploy an Azure Analysis Service model
-- task: liprec.vsts-release-aas.deploy-aas-db.deploy-aas-db@1
- displayName: 'Deploy model'
+```yml
+- task: deploy-aas-db@1
   inputs:
-    #ConnectedServiceNameARM: # Required
-    #aasServer: # Required
-    #modelName: # Optional
-    #loginType: 'User' # Option: user, spn
-    #adminName: # Required when loginType == user
-    #adminPassword: # Required when loginType == user
-    #tenantId: # Required when loginType == spn
-    #appId: # Required when loginType == spn
-    #appKey: # Required when loginType == spn
-    #pathToModel: # Required
-    #connectionType: none # Option: none, sql
-    #sourceSQLServer: # Required when loginType == sql
-    #sourceSQLDatabase: # Required when loginType == sql
-    #sourceSQLUsername: # Required when loginType == sql
-    #sourceSQLPassword: # Required when loginType == sql
-    #ipDetectionMethod: autoDetect # Option: autoDetect, ipAddressRange
-    #startIpAddress: # Required when ipDetectionMethod == ipAddressRange
-    #endIpAddress: # Required when ipDetectionMethod == ipAddressRange
-    #deleteFirewallRule: true # Optional
-    #overwrite: true # Optional
-    #remove: false # Optional
-    #azurePowerShellVersion: latestVersion # Option: latestVersion, otherVersion
-    #preferredAzurePowerShellVersion: # Required when targetAzurePs == otherVersion
+    connectedServiceNameSelector: 'connectedServiceNameARM | connectedServiceNamePBI'
+    connectedServiceNameARM: 'service connection to AAS' # connectedServiceNameSelector = 'connectedServiceNameARM'
+    connectedServiceNamePBI: 'service connection to PBI' #  connectedServiceNameSelector = 'connectedServiceNamePBI'
+    aasServer: 'asazure://westeurope.asazure.windows.net/fabrikam | powerbi://api.powerbi.com/v1.0/myorg/dataset'
+    databaseName: 'database'
+    loginType: 'inherit | spn | user'
+    tenantId: 'tenantId'      # loginType = 'spn'
+    appId: 'appId'            # loginType = 'spn'
+    appKey: 'appKey'          # loginType = 'spn'
+    adminName: "username"     # loginType = 'user'
+    adminPassword: "password" # loginType = 'user'
+    pathToModel: './model.bim'
+    partitionDeployment: 'retainpartitions | deploypartitions'
+    roleDeployment: 'deployrolesandmembers | deployrolesretainmembers | retainroles'
+    connectionType: 'none | advanced | sql'
+    datasources: | # connectionType = 'advanced'
+      [
+        {
+          "name": "<datasetname>",
+          "authenticationKind": "UsernamePassword",
+          "connectionDetails": {
+            "address": {
+              "server": "<sqlserver>",
+              "database": "<databasename>"
+            }
+          },
+          "credential": {
+            "Username": "<username>",
+            "Password": "<password>"
+          }
+        }
+      ]
+    sourceSQLServer: 'SQLServer'  # connectionType = 'sql'
+    sourceSQLDatabase: 'Database' # connectionType = 'sql'
+    sourceSQLUsername: 'Username' # connectionType = 'sql'
+    sourceSQLPassword: 'Password' # connectionType = 'sql'
+    ipDetectionMethod: "autoDetect | ipAddressRange"
+    startIpAddress: "10.0.0.1" # ipDetectionMethod = 'ipAddressRange' 
+    endIpAddress: "10.0.0.1"   # ipDetectionMethod = 'ipAddressRange'
+    deleteFirewallRule: "true | false"
 ```
 
-## Arguments
+## Parameters
 
-| Argument | Description |
-|----------|-------------|
-| `ConnectedServiceNameARM`<br>Azure RM Subscription | (Required) Name of Azure Resource Manager service connection.|
-| `aasServer`<br>Analysis Services name | (Required) Name of the Azure Analysis Services name.|
-| `modelName`<br>Model Name | (Optional) Name of the Analysis Services Model. Will overwrite the model name in the .bim file.|
-| `loginType`<br>Login type | (Required) Type of account used to access the AAS instance, can be Named User or Service Principal.<br>Default: `user`|
-| `adminName`<br>Analysis Services Admin | (Required when Login type is Named User) The Azure Analysis Service admin username.|
-| `adminPassword`<br>Analysis Services Admin Password | (Required when Login type is Named User) Password of the Azure Analysis Service admin.|
-| `tenantId`<br>Azure AD TenantID | (Required when Login type is Service Principal) Azure AD TenantID of the service principal.|
-| `appId`<br>Application ID | (Required when Login type is Service Principal) Application ID of the service principal.|
-| `appKey`<br>Application Key | (Required when Login type is Service Principal) Application secret of the service principal.|
-| `pathToModel`<br>Model file | (Required) Full qualified path the `model.bim` file.|
-| `connectionType`<br>Data Source Type | (Required) Type of connection to model datasource. Currently it can only be None or Azure SQL.|
-| `sourceSQLServer`<br>Source Azure SQL Server Name | (Required when Data Source Type is Azure SQL) Azure SQL Server name.|
-| `sourceSQLDatabase`<br>Source Database Name | (Required when Data Source Type is Azure SQL) Name of the Azure SQL Database, where the files will be deployed.|
-| `sourceSQLUsername`<br>Source User Login | (Required when Data Source Type is Azure SQL) Specify the Azure SQL Server user login.|
-| `sourceSQLPassword`<br>Source Password | (Required when Data Source Type is Azure SQL) Password for the Azure SQL Server user. It can accept variable defined as `$(passwordVariable)`. You may mark the variable type as 'secret' to secure it.|
-| `ipDetectionMethod`<br>Specify Firewall Rules Using | (Required) Type of Firewall deployment. Can be Auto Detect or IP Address Range.<br>Default: `Auto Detect`|
-| `startIpAddress`<br>Start IP Address | (Required when Specify Firewall Rules Using is IP Address Range) The starting IP Address of the automation agent machine pool like 196.21.30.50 |
-| `endIpAddress`<br>End IP Address | (Required when Specify Firewall Rules Using is IP Address Range) The ending IP Address of the automation agent machine pool like 196.21.30.65|
-| `deleteFirewallRule`<br>Delete Rule After Task Ends | (Optional) If selected, the added exception for IP addresses of the automation agent will be removed.<br>Default: `true`|
-| `overwrite`<br>Overwrite | (Optional) Overwrites the existing model.<br>Default: `true`|
-| `remove`<br>Remove before Deploy | (Optional) Remove the model before a new deployment.<br>Default: `false`|
-| `azurePowerShellVersion`<br>Azure PowerShell Version | (Required) Pick the latest version available on the agent or specify a preferred version of Azure PowerShell, can be  Latest installed version or Specify version.<br>Alias: `targetAzurePs`<br>Default: `Latest installed version`|
-| `preferredAzurePowerShellVersion`<br>Preferred Azure PowerShell Version | (Required when Azure PowerShell Version is Specify version) Preferred Azure PowerShell Version needs to be a proper semantic version eg. 1.2.3.<br>Alias: `customTargetAzurePs`|
+Azure Details:
+- **connectedServiceNameSelector** - Type of service connection to use
+    - `connectedServiceNameARM`: Use an Azure Resource Manager service connection
+    - `connectedServiceNamePBI`: Use a Power Platform service connection, to install: [Power Platform Build Tools](https://marketplace.visualstudio.com/items?itemName=microsoft-IsvExpTools.PowerPlatform-BuildTools)
+- **connectedServiceNameARM** - Which Azure RM service connection should be used to connect to the datafactory
+- **connectedServiceNamePBI** - Which Power Platform service connection should be used to connect to the datafactory
 
-## Additional notes
+Analysis Service Details:
+- **aasServer** - The name of the Azure Analysis Service server or Power BI Premium connection
+- **databaseName** - The name of the Tabular database
+- **loginType** - Type of Azure Analysis Service login:
+    - `inherit`: inherit the service principal from the service connection
+    - `spn`: using a service principal
+    - `user`: using a named user 
 
-- At this moment the task only supports 1 SQL Server connection *Support for more types of connection is in development*. 
-- At this moment the following configuration are tested and working:
-    - Model 1400 and a single SQL Server database as datasource
+If **loginType** option is `spn`:
+- **tenantId** - Azure ID Tenant ID
+- **appId** - Application ID of the Service Principal
+- **appKey** - Key/secret of the Application ID
 
-More configuration will follow. Feel free to contact me for a specific configuration.
+If **loginType** option is `user`: 
+- **adminName** - The admin user use to connect to the Azure Analysis Service instance
+- **adminPassword** - The password of the admin user use to connect to the Azure Analysis Service instance
+
+Deployment Details:
+- **pathToModel** - Location of the '.asdatabase'/'.bim' file
+- **partitionDeployment** - Determine how existing partitions are treated during deployment.
+    - `deploypartitions`: any existing partitions will be replaces
+    - `retainpartitions`: partitions of new tables will be deployed, but partitions for existing tables will be unaffected
+- **roleDeployment** - Determine how security roles and role members are treated during deployment.
+    - `deployrolesandmembers`: any existing roles and members will be replaced
+    - `deployrolesretainmembers`: roles will be deployed along with their members for new roles. Members for existing roles will be retained
+    - `retainroles`: the roles and members will not be deployed
+
+Data Source Connection Details (only applicable for Azure Analysis service):
+- **connectionType** - Type of the data source configuration:
+    - `none`: no additional security configuration is needed
+    - `advanced`: addtional security configuration is provided in a JSON array.
+    - `sql`: configure the first datasource with the provided servername, databasename, username and password. Support also legacy datasource
+
+If **loginType** option is `advanced`:
+- **datasources**: - See sample above on the format of the JSON and model definition in the .asdatabase/.bim file
+    ```json
+        [
+          {
+            "name": "<DataSourceName>",
+            "authenticationKind": "UsernamePassword",
+            "connectionDetails": {
+              "address": {
+                "server": "<ServerName>",
+                "database": "<DatabaseName>"
+              }
+            },
+            "credential": {
+              "Username": "<UserName>",
+              "Password": "<Password>"
+            }
+          }
+        ]
+    ```
+     
+If **loginType** option is `sql`: 
+- **sourceSQLServer** - The servername of the Azure SQL database server
+- **sourceSQLDatabase** - The database name
+- **sourceSQLUsername** - The username used for the connection by the model for trhe connection to the source database
+- **sourceSQLPassword** - The password for the given username
+
+Firewall (only applicable for Azure Analysis service):
+- **ipDetectionMethod** - How to determine the IP address that needs to be added to the firewall to enable a connection
+    - `autoDetect`: adds the IP address of the agent to the firewall rules
+    - `ipAddressRange`: Manual provide the IP Address Range to be added to the firewall rules.
+- **deleteFirewallRule** - Delete the firewall rule at the end of the tasks 
+
+If **ipDetectionMethod** option is `ipAddressRange`:
+- **startIpAddress** - Start IP address of the range
+- **endIpAddress** - End IP address of the range.
+
+# Power BI Premium Data Source Connection Details
+
+Setting datasource credentials via metadata is not possible for Power BI datasets, see: https://docs.microsoft.com/en-us/power-bi/admin/service-premium-connect-tools#setting-data-source-credentials
+To set Power BI datasource credentials either vai the UI or via the Power BI REST APIs. 
 
 ## Release notes
 
-### 1.3
+**1.5.0**
+- Rewritten to Powershell 5.1 (powershell.exe) and ADOMD + TOM
+- Support for Power BI Premium XMLA endpoints
+- Support for multiple datasources
+- Support for merging of roles + members and partitions
 
-- Bug fix for Remove before Deploy
-- Add extra removal of firewall leftovers
+**1.3.0**
+- Support for legacy datasources
 
-### 1.2
-
+**1.2.0**
 - Add support for service principal deployments
 - Add support for adding firewall rules
 
-### 1.1.2
-
+**1.1.2**
 - Model files are readed with UTF8 encoding
 
-### 1.1.0
-
+**1.1.0**
 - New: AAS return messages (error/warning) are used for the tasks logging
 - Bugfix: Better logging when exceptions are thrown
 
-### 1.0.0
-
+**1.0.0**
 - Initial public release
 
 ## Feedback
