@@ -20,7 +20,13 @@ Of the Event Viewer Power BI custom visualization the following versions are rel
 ![Custom Visual Validation Process](images/ValidationProcess.png)
 *NOTE: All Power BI gallery visuals are distributed via the Azure CDN network and this will cause a delay of max a couple of days in delivering a new version.*
 
-## 1.0.0 - (July 2021)
+## [1.1.0] - February 2022
+
+### Added
+
+- 'static' state colors
+
+## [1.0.0] - January 2022
 
 Initial release
 

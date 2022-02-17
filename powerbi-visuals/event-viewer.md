@@ -74,6 +74,9 @@ With the time axis option the behavior of the time (horzontal) axis can be chang
 
 With the state color option it is possible to alter the colors of the different states. States are populated based on the data provided to the visual
 
+- **Persist formatting** - Toggle to store current state color config. Toggle will be disabled after storing the color config.
+- **Colors** - JSON Array with prefix link colors: [{name, color}]: use to set the different state colors to the provided one.
+
 ## Unknown
 
 With the unknown formatting option it is possible to alter the 'unknown' state. The unknown state can be used is the first event of a device is arriving late compared to the start time of the axis. 
