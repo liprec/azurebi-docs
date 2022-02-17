@@ -26,7 +26,7 @@ system: {
 
 - [Overview](xref:pbi/boxandwhisker/overview)
 - [Changelog](xref:pbi/boxandwhisker/changelog)
-- [AppSource listing](https://appsource.microsoft.com/product/power-bi-visuals/WA104380831?src=website&mktcmpid=overview)
+- [AppSource listing](https://appsource.microsoft.com/product/power-bi-visuals/WA104380831?ocid=BoxWhisker-overview-page)
 
 ## Event Viewer
 
@@ -34,7 +34,7 @@ system: {
 
 - [Overview](xref:pbi/eventviewer/overview)
 - [Changelog](xref:pbi/eventviewer/changelog)
-- [AppSource listing]()
+- [AppSource listing](https://appsource.microsoft.com/en-us/product/power-bi-visuals/janpieterposthuma1781555020.eventviewer?ocid=EventViewer-overview-page)
 
 ## Hierarchy Slicer
 
@@ -42,7 +42,7 @@ system: {
 
 - [Overview](xref:pbi/hierarchyslicer/overview)
 - [Changelog](xref:pbi/hierarchyslicer/changelog)
-- [AppSource listing](https://appsource.microsoft.com/product/power-bi-visuals/WA104380820?src=website&mktcmpid=overview)
+- [AppSource listing](https://appsource.microsoft.com/product/power-bi-visuals/WA104380820?ocid=HierarchySlicer-overview-page)
 
 ## D3.js Visual
 
@@ -50,7 +50,7 @@ system: {
 
 - [Overview](xref:pbi/d3js/overview)
 - [Changelog](xref:pbi/d3js/changelog)
-- [AppSource listing](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381354?src=website&mktcmpid=overview)
+- [AppSource listing](https://appsource.microsoft.com/en-us/product/power-bi-visuals/WA104381354?ocid=D3js-overview-page)
 
 ## Sponsors
  
