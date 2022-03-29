@@ -1,0 +1,18 @@
+{
+  "routes": [],
+  "globalHeaders": {
+      "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+      "X-Content-Type-Options": "nosniff",
+      "Referrer-Policy": "no-referrer-when-downgrade",
+      "Feature-Policy": "camera 'none'; geolocation 'none'",
+      "Cache-Control": "public, max-age=604800",
+      "Content-Security-Policy": "script-src 'self' 'unsafe-inline' https://js.monitor.azure.com https://api.github.com https://ajax.aspnetcdn.com; style-src 'self' 'unsafe-inline' https://c.datascenarios.nl/; img-src 'self' https://user-images.githubusercontent.com; font-src 'self' data:; frame-src https://app.powerbi.com; report-uri https://datascenarios.report-uri.com/r/d/csp/enforce"
+  },
+  "mimeTypes": {
+      "html": "text/html; charset=utf-8",
+      "js": "text/javascript; charset=utf-8",
+      "json": "application/json; charset=utf-8",
+      "svg": "image/svg+xml; charset=utf-8",
+      "webmanifest": "application/manifest+json; charset=utf-8"
+  }
+}

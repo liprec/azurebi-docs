@@ -4,7 +4,3 @@
 <script type="text/javascript" src="{{_rel}}styles/docfx.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/main.js"></script>
 <script type="text/javascript" src="{{_rel}}styles/feedback.js"></script>
-
- <noscript>
-    <img src='https://c.datascenarios.nl/pixel.png?app_key=f09bcb9235619882f8977617e8b651a3cd20ef28&begin_session=1'/>
-</noscript>
