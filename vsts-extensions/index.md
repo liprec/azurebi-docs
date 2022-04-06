@@ -30,7 +30,7 @@ This extension adds release tasks related to Azure Analysis Service: deploy mode
 
 ## Azure Data Factory
 
-This extension adds release tasks related to Azure Data Factory (V1 and V2): publishing JSON, suspend/resume pipelines, active triggers [V2]
+This extension adds release tasks related to Azure Data Factory and Azure Synapse Workspace: publishing and delete pipelines/datasets/triggers/linked services, toggle triggers, run pipelines.
 
 - ![Logo Azure Data Factory](images/adf-logo.png)[Overview](xref:vsts/azuredatafactory/overview)
 - [Marketplace listing](https://marketplace.visualstudio.com/items?itemName=liprec.vsts-publish-adf)

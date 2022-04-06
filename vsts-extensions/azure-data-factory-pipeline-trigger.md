@@ -1,14 +1,15 @@
 ---
 uid: vsts/azuredatafactory/pipelinetrigger
 title: Azure Data Factory Pipeline Trigger
-description: This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory pipeline(s) run of an existing Azure Data Factory.
+description: This task can be added to an Azure DevOps pipeline to trigger pipeline(s) run of an existing Azure Data Factory or Azure Synapse Workspace.
 tags: [
     { "name": "AzureDevOps" },
     { "name": "azure-pipelines" },
     { "name": "Azure" },
     { "name": "release" },
     { "name": "pipelines" },
-    { "name": "data factory" }
+    { "name": "data factory" },
+    { "name": "Synapse" }
 ]
 system: {
     document_id: faf75e4f-aed9-4dbc-8ecc-5581a475ef79,
@@ -18,7 +19,7 @@ system: {
 
 # Azure Data Factory Pipeline Trigger
 
-This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory pipeline(s) run of an existing Azure Data Factory.
+This task can be added to an Azure DevOps pipeline to trigger pipeline(s) run of an existing Azure Data Factory or Azure Synapse Workspace.
 
 ## YAML Snippet
 

@@ -7,7 +7,8 @@ tags: [
     { "name": "azure-pipelines" },
     { "name": "Azure" },
     { "name": "release" },
-    { "name": "Data Factory" }
+    { "name": "Data Factory" },
+    { "name": "Synapse" }
 ]
 system: {
     document_id: ffa53f4b-f056-451f-b3e7-2a98f26e1b2f,
@@ -17,29 +18,29 @@ system: {
 
 # Azure Data Factory
 
-This extension adds release tasks related to Azure Data Factory (V2 only supported) to Azure DevOps.
+This extension adds pipeline tasks to Azure DevOps to interact with to Azure Data Factory or Azure Synapse Analytics.
 
 ## Azure Data Factory Delete Items
 
-This task can be added to an Azure DevOps pipeline to delete Linked Services, Datasets, Dataflows, Pipelines and/or Triggers from an existing Azure Data Factory.
+This task can be added to an Azure DevOps pipeline to delete Linked Services, Datasets, Dataflows, Pipelines and/or Triggers from an existing Azure Data Factory or Azure Synapse Workspace.
 
 [More information](xref:vsts/azuredatafactory/delete)
 
 ## Azure Data Factory Deployment
 
-This task can be added to an Azure DevOps pipeline to deploy JSON files with definition of Linked Services, Datasets, Dataflows, Pipelines and/or Triggers to an existing Azure Data Factory. 
+This task can be added to an Azure DevOps pipeline to deploy JSON files with definition of Linked Services, Datasets, Dataflows, Pipelines and/or Triggers to an existing Azure Data Factory or Azure Synapse Workspace. 
 
 [More information](xref:vsts/azuredatafactory/deploy)
 
 ## Azure Data Factory Trigger Management
 
-This task can be added to an Azure DevOps pipeline to either start or stop Azure Data Factory triggers of an existing Azure Data Factory.
+This task can be added to an Azure DevOps pipeline to either start or stop Azure Data Factory triggers of an existing Azure Data Factory or Azure Synapse Workspace.
 
 [More information](xref:vsts/azuredatafactory/trigger)
 
 ## Azure Data Factory Pipelines Trigger
 
-This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory pipeline(s) run of an existing Azure Data Factory.
+This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory pipeline(s) run of an existing Azure Data Factory or Azure Synapse Workspace.
 
 [More information](xref:vsts/azuredatafactory/pipelinetrigger)
 

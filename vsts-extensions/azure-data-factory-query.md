@@ -3,8 +3,10 @@ uid: vsts/azuredatafactory/query
 title: Query Azure Data Factory runs
 description: Observe the configured Azure Data Factory runs for active ones.
 tags: [
-    { "name": "VSTS" }, 
+    { "name": "AzureDevOps" },
+    { "name": "azure-pipelines" },
     { "name": "Azure" },
+    { "name": "pipelines" },
     { "name": "release" },
     { "name": "data factory" }
 ]

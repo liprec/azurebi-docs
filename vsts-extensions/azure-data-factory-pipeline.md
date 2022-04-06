@@ -1,12 +1,15 @@
 ---
 uid: vsts/azuredatafactory/pipeline
 title: Azure Data Factory Pipelines Management
-description: This release task can be added to a release pipeline to either suspend or resume all pipelines of an Azure Data Factory.
+description: This release task can be added to a release pipeline to either suspend or resume all pipelines of an Azure Data Factory or Azure Synapse Workspace.
 tags: [
-    { "name": "VSTS" }, 
+    { "name": "AzureDevOps" },
+    { "name": "azure-pipelines" },
     { "name": "Azure" },
     { "name": "release" },
-    { "name": "data factory" }
+    { "name": "pipelines" },
+    { "name": "data factory" },
+    { "name": "Synapse" }
 ]
 system: {
     document_id: 7dc9e4de-8ca3-46be-b1bd-17c683c6a2a3,
@@ -16,7 +19,7 @@ system: {
 
 # Azure Data Factory Pipelines Management
 
-This release task can be added to a release pipeline to either suspend or resume all pipelines of an Azure Data Factory.
+This release task can be added to a release pipeline to either suspend or resume all pipelines of an Azure Data Factory or Azure Synapse Workspace.
 ![Screenshot of the Pipeline Management task](images/adf-screenshot-3.png)
 
 ## Parameters

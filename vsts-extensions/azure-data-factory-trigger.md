@@ -1,12 +1,15 @@
 ---
 uid: vsts/azuredatafactory/trigger
 title: Azure Data Factory Trigger
-description: This release task can be added to a release pipeline to either start or stop Azure Data Factory triggers.
+description: This release task can be added to a release pipeline to either start or stop Azure Data Factory or Azure Synapse Workspace triggers.
 tags: [
-    { "name": "VSTS" }, 
+    { "name": "AzureDevOps" },
+    { "name": "azure-pipelines" },
     { "name": "Azure" },
     { "name": "release" },
-    { "name": "data factory" }
+    { "name": "pipelines" },
+    { "name": "data factory" },
+    { "name": "Synapse" }
 ]
 system: {
     document_id: df2f37bb-fec0-4b8e-a348-b14464d9ced1,
@@ -16,7 +19,7 @@ system: {
 
 # Azure Data Factory Trigger
 
-This release task can be added to a release pipeline to either start or stop Azure Data Factory triggers.
+This release task can be added to a release pipeline to either start or stop Azure Data Factory or Azure Synapse Workspace triggers.
 
 ## YAML Snippet
 
