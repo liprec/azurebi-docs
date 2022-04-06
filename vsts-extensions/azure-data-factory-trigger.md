@@ -22,13 +22,14 @@ This release task can be added to a release pipeline to either start or stop Azu
 
 ```yaml
 # Azure Data Factory Trigger
-# Satrt or stops an Azure Data Factory trigger
+# Start or stops an Azure Data Factory trigger
 - task: toggle-adf-trigger@2
   displayName: 'Toggle trigger(s) in DataFactory'
   inputs:
     #azureSubscription: # Required
-    #ResourceGroupName: # Required
-    #DatafactoryName: # Required
+    #ResourceGroupName: # Optional
+    #DatafactoryName: # Optional
+    #WorkspaceUrl: # Optional - Either 'WorkspaceUrl' or 'ResourceGroupName'/'DatafactoryName' is required
     #TriggerFilter: # Required
     #TriggerStatus: 'Start' # Options: start, stop
     #continue: true # Optional
@@ -40,14 +41,20 @@ This release task can be added to a release pipeline to either start or stop Azu
 | Argument | Description |
 |----------|-------------|
 | `azureSubscription`<br>Azure subscription | (Required) Name of Azure Resource Manager service connection.|
-| `ResourceGroupName`<br>Resource group | (Required) Name of the Resource Group containing the Data Factory.|
-| `DatafactoryName`<br>Azure Data Factory | (Required) Name of the Data Factory.|
+| `ResourceGroupName`<br>Resource group | (Optional) Name of the Resource Group containing the Data Factory.|
+| `DatafactoryName`<br>Azure Data Factory | (Optional) Name of the Data Factory.|
+| `WorkspaceUrl`<br>Synapse workspace development endpoint URL | (Optional) Name of the Synapse workspace development endpoint, eg. https://myworkspace.dev.azuresynapse.net"|
 | `TriggerFilter`<br>Trigger Filter | (Required) Wildcard filter to determine which triggers to toggled.<br>`*`: all triggers will be deleted.|
 | `TriggerStatus`<br>Set Trigger Status| (Required) The new status of the Azure Data Factory Trigger(s), can be Start or Stop.<br>Default vale: `start`|
 | `continue`<br>Continue on error | (Optional) Continue on a failure of a pipeline trigger.<br>Default value: `false`|
 | `Throttle`<br> Number of parallel actions| (Optional) Number of parallel actions.<br>Default value: `5`.|
 
 ## Release notes
+
+### 2.5
+
+- Support for Governmnet Clouds
+- Support for Azure Synapse Analytics
 
 ### 2.2
 

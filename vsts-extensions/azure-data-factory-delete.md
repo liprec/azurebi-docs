@@ -29,8 +29,9 @@ This task can be added to an Azure DevOps pipeline to delete Linked Services, Da
   displayName: 'Delete items from DataFactory'
   inputs:
     #azureSubscription: # Required
-    #ResourceGroupName: # Required
-    #DatafactoryName: # Required
+    #ResourceGroupName: # Optional
+    #DatafactoryName: # Optional
+    #WorkspaceUrl: # Optional - Either 'WorkspaceUrl' or 'ResourceGroupName'/'DatafactoryName' is required
     #ServiceFilter: # Optional
     #DataflowFilter: # Optional
     #DatasetFilter: # Optional
@@ -47,8 +48,9 @@ This task can be added to an Azure DevOps pipeline to delete Linked Services, Da
 | Argument | Description |
 |----------|-------------|
 | `azureSubscription`<br>Azure subscription | (Required) Name of Azure Resource Manager service connection.|
-| `ResourceGroupName`<br>Resource group | (Required) Name of the Resource Group containing the Data Factory.|
-| `DatafactoryName`<br>Azure Data Factory | (Required) Name of the Data Factory.|
+| `ResourceGroupName`<br>Resource group | (Optional) Name of the Resource Group containing the Data Factory.|
+| `DatafactoryName`<br>Azure Data Factory | (Optional) Name of the Data Factory.|
+| `WorkspaceUrl`<br>Synapse workspace development endpoint URL | (Optional) Name of the Synapse workspace development endpoint, eg. https://myworkspace.dev.azuresynapse.net"|
 | `ServiceFilter`<br>Filter to Linked Service definitions | (Optional) Wildcard filter to determine which Linked Service(s) to delete.<br>`*`: all triggers will be deleted|
 | `DataflowFilter`<br>Filter to Data flow definitions | (Optional) Wildcard filter to determine which Data flow(s) to delete.<br>`*`: all triggers will be deleted|
 | `DatasetFilter`<br>Filter to Dataset definitions | (Optional) Wildcard filter to determine which Dataset(s) to delete.<br>`*`: all triggers will be deleted|
@@ -71,6 +73,11 @@ This task can be added to an Azure DevOps pipeline to delete Linked Services, Da
     - Linked Servces
 
 ## Release notes
+
+### 2.5
+
+- Support for Governmnet Clouds
+- Support for Azure Synapse Analytics
 
 ### 2.2
 

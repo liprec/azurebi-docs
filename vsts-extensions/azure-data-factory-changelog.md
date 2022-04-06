@@ -18,6 +18,15 @@ Of the Azure Data Factory release extension the following versions are released 
 
 ## History
 
+### **2.5**
+
+- Added support for Government Clouds, US, China, and Germany
+- Added support for Azure Synapse Analytics
+
+### **2.4**
+
+- Fix for empty `DeploymentOutputs` variable
+
 ### **2.3**
 
 - Added support for dependencies between pipelines and linked services

@@ -29,8 +29,9 @@ This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory
   displayName: 'Trigger pipeline run DataFactory'
   inputs:
     #azureSubscription: # Required
-    #ResourceGroupName: # Required
-    #DatafactoryName: # Required
+    #ResourceGroupName: # Optional
+    #DatafactoryName: # Optional
+    #WorkspaceUrl: # Optional - Either 'WorkspaceUrl' or 'ResourceGroupName'/'DatafactoryName' is required
     #PipelineFilter: # Required
     #PipelineParameterType: 'Inline' # Options: inline, path
     #PipelineParameter: # Optional
@@ -45,8 +46,9 @@ This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory
 | Argument | Description |
 |----------|-------------|
 | `azureSubscription`<br>Azure subscription | (Required) Name of Azure Resource Manager service connection.|
-| `ResourceGroupName`<br>Resource group | (Required) Name of the Resource Group containing the Data Factory.|
-| `DatafactoryName`<br>Azure Data Factory | (Required) Name of the Data Factory.|
+| `ResourceGroupName`<br>Resource group | (Optional) Name of the Resource Group containing the Data Factory.|
+| `DatafactoryName`<br>Azure Data Factory | (Optional) Name of the Data Factory.|
+| `WorkspaceUrl`<br>Synapse workspace development endpoint URL | (Optional) Name of the Synapse workspace development endpoint, eg. https://myworkspace.dev.azuresynapse.net"|
 | `PipelineFilter`<br>Pipeline Filter | (Required) Wildcard filter to determine which pipeline to trigger execution.<br>`*`: all pipeline will be triggered.|
 | `PipelineParameterType`<br>Pipeline Parameter Location| (Required) Location of the (optional) pipeline trigger parameters, can be Inline or Path.<br>Default vale: `inline`|
 | `PipelineParameter`<br>Pipeline Parameter| (Optional) Additional pipeline parameters in JSON format.|
@@ -56,6 +58,11 @@ This task can be added to an Azure DevOps pipeline to trigger Azure Data Factory
 | `Throttle`<br> Number of parallel actions| (Optional) Number of parallel actions.<br>Default value: `5`.|
 
 ## Release notes
+
+### 2.5
+
+- Support for Governmnet Clouds
+- Support for Azure Synapse Analytics
 
 ### 2.2
 

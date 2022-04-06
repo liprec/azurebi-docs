@@ -29,8 +29,9 @@ This task can be added to an Azure DevOps pipeline to deploy JSON files with def
   displayName: 'Deploy JSON files to DataFactory'
   inputs:
     #azureSubscription: # Required
-    #ResourceGroupName: # Required
-    #DatafactoryName: # Required
+    #ResourceGroupName: # Optional
+    #DatafactoryName: # Optional
+    #WorkspaceUrl: # Optional - Either 'WorkspaceUrl' or 'ResourceGroupName'/'DatafactoryName' is required
     #ServicePath: # Optional
     #DataflowPath: # Optional
     #DatasetPath: # Optional
@@ -47,8 +48,9 @@ This task can be added to an Azure DevOps pipeline to deploy JSON files with def
 | Argument | Description |
 |----------|-------------|
 | `azureSubscription`<br>Azure subscription | (Required) Name of Azure Resource Manager service connection.|
-| `ResourceGroupName`<br>Resource group | (Required) Name of the Resource Group containing the Data Factory.|
-| `DatafactoryName`<br>Azure Data Factory | (Required) Name of the Data Factory.|
+| `ResourceGroupName`<br>Resource group | (Optional) Name of the Resource Group containing the Data Factory.|
+| `DatafactoryName`<br>Azure Data Factory | (Optional) Name of the Data Factory.|
+| `WorkspaceUrl`<br>Synapse workspace development endpoint URL | (Optional) Name of the Synapse workspace development endpoint, eg. https://myworkspace.dev.azuresynapse.net"|
 | `ServicePath`<br>Path to Linked Service definitions | (Optional) Fully qualified path of the file or folder containing Linked Service JSON definitions.|
 | `DataflowPath`<br>Path to Data flow definitions | (Optional) Fully qualified path of the file or folder containing Data flow JSON definitions.|
 | `DatasetPath`<br>Path to Dataset definitions | (Optional) Fully qualified path of the file or folder containing Dataset JSON definitions.|
@@ -71,6 +73,11 @@ This task can be added to an Azure DevOps pipeline to deploy JSON files with def
     - Triggers
 
 ## Release notes
+
+### 2.5
+
+- Support for Governmnet Clouds
+- Support for Azure Synapse Analytics
 
 ### 2.2
 
